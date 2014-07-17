@@ -1,0 +1,176 @@
+%% vitamin B6 and survival from Kidney cancer (K2 study)
+%% tables and figures
+
+\documentclass[a4paper,10pt]{article}
+%\usepackage[numbers,comma,square,sort&compress]{natbib}
+\usepackage{cite}
+\renewcommand{\citeleft}{(}
+\renewcommand{\citeright}{)}
+\usepackage{setspace}
+
+\usepackage{caption}
+
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage{threeparttable}
+\usepackage{color, soul}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  citecolor=black,
+  linkcolor=black,
+}
+
+%% use palatino font
+\usepackage{mathpazo}
+\linespread{1.15}
+
+%% indenting and paragraphing
+\parskip 10pt
+\parindent 25pt
+
+%\renewcommand{\cite}{\citep}
+
+\begin{document}
+
+%% descriptive table
+\begin{table}
+\caption{Demographic and clinical characteristics of the participants by vital 
+status at the end of follow-up.}
+\centering
+\input{../analysis/output/o07_descriptive_by_vitstat.tex}
+\end{table}
+
+\clearpage 
+%% HR table
+\begin{table}
+\caption{Hazard ratios (HR) [95\% confidence intervals (CI)] for risk of all 
+cause and cause specific mortality by categories of circulating vitamin B6 
+concentration.}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+& & &\multicolumn{3}{c}{minimally adjusted$^\dag$} & 
+\multicolumn{3}{c}{adjusted$^\ddag$} \\
+ \cmidrule(r){4-6} \cmidrule(l){7-9} 
+& B6 group & $N_{\text{deaths}}$ & HR & [95\% CI] & $p$ & HR & [95\% CI] & 
+$p$ \\
+\midrule
+\input{../analysis/output/o03_hr_table.tex}
+\bottomrule
+\end{tabular}
+\newline
+{\footnotesize 
+$^\dag$Stratified by country, and adjusted for stage, age at recruitment, and 
+sex \newline
+$^\ddag$Additionally adjusted for BMI (kg/m$^2$), smoking status, cigarettes 
+per day, alcohol drinking status, and alcohol intake per day (mL) \newline
+$^*p$-values for the all-cause models are from tests against the null 
+hypothesis that the vitamin B6 coefficients are identically 0. 
+\newline
+$^{\S}p$-values for the competing risks model are from tests against the null 
+hypothesis of no heterogeneity of the coefficients by cause of death (RCC 
+versus non-RCC).
+}
+\end{table}
+\clearpage
+
+%% Interactions with various factors
+\begin{figure}
+ \centering
+\caption{Hazard ratios (HR) and 95\% confidence intervals (CI) for a 
+doubling in vitamin B6 concentration by potential effect modifiers. 
+\footnotesize{Estimates derived from Cox models stratified by country of 
+recruitment, and adjusted for stage, age at recruitment, and sex. $p$-values 
+are from Wald tests of the interaction terms.}}
+\includegraphics[width=14cm]{../analysis/output/g08_interactions.pdf}
+\end{figure}
+
+
+%% Model based survival by b6 and stage
+\begin{figure}
+ \centering 
+\caption{\textbf{Model based survival function by categories of 
+circulating 
+vitamin B6 and stage.} \footnotesize{Estimates derived from flexible 
+parametric survival models assuming proportional hazards for B6 categories, no 
+interaction between stage and B6 categories, and a diagnosis age of 60y.}} 
+\includegraphics[width=14cm]{../analysis/output/g05_surv_b6_stage.pdf}
+\end{figure}
+
+\clearpage
+%% HR table for relapse
+\begin{table}
+\caption*{Supplementary Table 1: Hazard ratios (HR) [95\% confidence intervals 
+(CI)] for risk of 
+relapse free survival, and from a competing risks model of relapse versus 
+death, by categories of circulating vitamin B6 concentration.}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+& & &\multicolumn{3}{c}{minimally adjusted$^\dag$} & 
+\multicolumn{3}{c}{adjusted$^\ddag$} \\
+ \cmidrule(r){4-6} \cmidrule(l){7-9} 
+& B6 group & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ & HR & [95\% CI] 
+& 
+$p$ \\
+\midrule
+\input{../analysis/output/o06_hr_table_relapse.tex}
+\bottomrule
+\end{tabular}
+\newline
+{\footnotesize 
+$^{\P}$Number of deaths and/or relapses occurring within the randomly selected 
+subcohort. Deaths occurring outside the subcohort are not included in this 
+analysis, so there are fewer events than in the main analysis presented in 
+Table 2. \newline
+$^\dag$Stratified by country, and adjusted for stage, age at recruitment, and 
+sex \newline
+$^\ddag$Additionally adjusted for BMI (kg/m$^2$), smoking status, cigarettes 
+per day, alcohol drinking status, and alcohol intake per day (mL) \newline
+$^*p$-values for the relapse free models are from tests against the null 
+hypothesis that the vitamin B6 coefficients are identically 0. \newline
+$^{\S}p$-values for the competing risks model are from tests against the null 
+hypothesis of no difference between the coefficients for relapse versus death.
+}
+\end{table}
+
+%% HR table adjusting for grade
+\begin{table}
+\centering
+\caption*{Supplementary Table 2: Hazard ratios$^\dag$ (HR) [95\% confidence 
+intervals 
+(CI)] for risk of all 
+cause and cause specific mortality by categories of circulating vitamin B6 
+concentration, additionally adjusting for grade (participants with missing 
+grade excluded).}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+& B6 group & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ \\
+\midrule
+\input{../analysis/output/o10_hr_grade_adj.tex}
+\bottomrule
+\end{tabular}
+\newline
+{\footnotesize 
+$^\dag$Stratified by country, and adjusted for stage, age at recruitment, sex, 
+BMI (kg/m$^2$), smoking status, cigarettes per day, alcohol drinking status,
+alcohol intake per day (mL), and grade (with participants with missing grade 
+excluded).\newline
+$^*p$-values for the relapse free models are from tests against the null 
+hypothesis that the vitamin B6 coefficients are identically 0. \newline
+$^{\S}p$-values for the competing risks model are from tests against the null 
+hypothesis of no difference between the coefficients for relapse versus death.
+}
+\end{table}
+\clearpage
+
+
+\end{document}
+
