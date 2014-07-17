@@ -45,32 +45,28 @@ analysis/p03_hr_table.do : ./data/d01_cacoh_stset_barlow.dta \
 	touch $@
 	stata-se -b $@
 
-analysis/p04_survpred.do : ./data/d01_cacoh_stset_barlow.dta 
+analysis/p05_survpred.do : ./data/d01_cacoh_stset_barlow.dta 
 	touch $@
 	stata-se -b $@
 
-analysis/p05_plot_survival.r : ./analysis/output/o04_survpred_d3_stage.csv
+analysis/p06_plot_survival.r : ./analysis/output/o05_survpred_d3_stage.csv
 	touch $@
 	R CMD BATCH --no-save --no-restore $@
 
-analysis/p06_relapse.do : ./data/d01_relapse_free_stset.dta \
+analysis/p07_relapse.do : ./data/d01_relapse_free_stset.dta \
   			  ./data/d01_relapse_compet_stset.dta	
 	touch $@
 	stata-se -b $@
 
-analysis/p07_table_descriptive.r : ./data/d00_analysis.dta
+analysis/p08_table_descriptive.r : ./data/d00_analysis.dta
 	touch $@
 	R CMD BATCH --no-save --no-restore $@
 
-analysis/p08_interactions.r : ./data/d01_cacoh_stset_barlow.dta \
+analysis/p09_interactions.r : ./data/d01_cacoh_stset_barlow.dta \
   			      ./analysis/r-utils/forest_interactions.r \
   			      ./analysis/r-utils/interacted.r 
 	touch $@
 	R CMD BATCH --no-save --no-restore $@
-
-analysis/p09_bmi.do : ./data/d01_cacoh_stset_barlow.dta 
-	touch $@
-	stata-se -b $@
 
 analysis/p10_hr_grade_adj.do : ./data/d01_cacoh_stset_barlow.dta \
 	      		       ./data/d01_cacoh_stset_barlow_specific.dta
@@ -127,22 +123,22 @@ analysis/output/?03_* : ./analysis/p03*
 	stata-se -b $<
 
 analysis/output/?04_* : ./analysis/p04*
-	stata-se -b $<
+	R CMD BATCH --no-save --no-restore $<
 
 analysis/output/?05* : ./analysis/p05*
-	R CMD BATCH --no-save --no-restore $<
-
-analysis/output/?06_* : ./analysis/p06*
 	stata-se -b $<
 
-analysis/output/?07* : ./analysis/p07*
+analysis/output/?06_* : ./analysis/p06*
 	R CMD BATCH --no-save --no-restore $<
+
+analysis/output/?07* : ./analysis/p07*
+	stata-se -b $<
 
 analysis/output/?08* : ./analysis/p08*
 	R CMD BATCH --no-save --no-restore $<
 
 analysis/output/?09* : ./analysis/p09*
-	stata-se -b $<
+	R CMD BATCH --no-save --no-restore $<
 
 analysis/output/?10* : ./analysis/p10*
 	stata-se -b $<

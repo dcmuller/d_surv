@@ -1,5 +1,4 @@
-*! p03_hr_table.do
-*! 20140430 dcmuller
+*! p10_hr_grade_adj.do
 * create table of HR and CI from Cox models
 
 set more off
