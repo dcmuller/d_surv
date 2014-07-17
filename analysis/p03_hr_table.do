@@ -9,35 +9,35 @@ log using ./analysis/output/l03_hr_table.log, replace
 version 12.1
 ********************************************************
 local minadj "i.stage_imputed age_recruitment i.sex"
-local adj "`minadj' bmi_current smoke_qty_day i.smoke_status alc_day i.alcohol_status"
+local adj "`minadj' bmi_current i.smoke_status i.alcohol_status"
 
 // overall
 use ./data/d01_cacoh_stset_barlow.dta, clear
 
 mat counts = J(4, 1, .)
 forval i=1/4 {
-  count if _d==1 & b6_q4==`i'
+  count if _d==1 & d3_q4==`i'
   mat counts[`i', 1] = r(N)
 }
 
-stcox i.b6_q4 `minadj', strata(country)
+stcox i.d3_q4 `minadj', strata(country)
 mat t = r(table)
 mat t = t[1..6, 1..4]'
 mat t = t[1..4, 1] , t[1..4, 5..6]
 estat phtest, d
-stcox b6_log2 `minadj', strata(country)
-test b6_log2
+stcox d3_log2_adj `minadj', strata(country)
+test d3_log2_adj
 mat t = (t, (r(p),.,.,.)')
 
 mat res = (counts, t)
 
-stcox i.b6_q4 `adj', strata(country)
+stcox i.d3_q4 `adj', strata(country)
 mat t = r(table)
 mat t = t[1..6, 1..4]'
 mat t = t[1..4, 1] , t[1..4, 5..6]
 estat phtest, d
-stcox b6_log2 `adj', strata(country)
-test b6_log2
+stcox d3_log2_adj `adj', strata(country)
+test d3_log2_adj
 mat t = (t, (r(p),.,.,.)')
 
 mat res = (res , t)
@@ -50,20 +50,20 @@ mat counts = J(8, 1, .)
 local iter = 1
 forval j=1/2 {
   forval i=1/4 {
-    count if _d==1 & b6_q4==`i' & death_strata==`j'
+    count if _d==1 & d3_q4==`i' & death_strata==`j'
     mat counts[`iter', 1] = r(N)
     local ++iter
   }
 }
 
-stcox i.b6_q4##death_strata `minadj', strata(death_strata country)
-testparm i(2/4).b6_q4#2.death_strata
+stcox i.d3_q4##death_strata `minadj', strata(death_strata country)
+testparm i(2/4).d3_q4#2.death_strata
 local p_interaction = r(p)
-nlcom (_b[1.b6_q4]) (_b[2.b6_q4]) (_b[3.b6_q4]) (_b[4.b6_q4]) ///
-      (_b[1.b6_q4] + _b[1b.b6_q4#2.death_strata]) ///
-      (_b[2.b6_q4] + _b[2.b6_q4#2.death_strata]) ///
-      (_b[3.b6_q4] + _b[3.b6_q4#2.death_strata]) ///
-      (_b[4.b6_q4] + _b[4.b6_q4#2.death_strata]) 
+nlcom (_b[1.d3_q4]) (_b[2.d3_q4]) (_b[3.d3_q4]) (_b[4.d3_q4]) ///
+      (_b[1.d3_q4] + _b[1b.d3_q4#2.death_strata]) ///
+      (_b[2.d3_q4] + _b[2.d3_q4#2.death_strata]) ///
+      (_b[3.d3_q4] + _b[3.d3_q4#2.death_strata]) ///
+      (_b[4.d3_q4] + _b[4.d3_q4#2.death_strata]) 
 mata
 b = st_matrix("r(b)")
 V = st_matrix("r(V)")
@@ -74,14 +74,14 @@ end
 mat list blu
 mat res_cr = (counts, blu,  (`p_interaction',.,.,.,.,.,.,.)')
 
-stcox i.b6_q4##death_strata `adj', strata(death_strata country)
-testparm i(2/4).b6_q4#2.death_strata
+stcox i.d3_q4##death_strata `adj', strata(death_strata country)
+testparm i(2/4).d3_q4#2.death_strata
 local p_interaction = r(p)
-nlcom (_b[1.b6_q4]) (_b[2.b6_q4]) (_b[3.b6_q4]) (_b[4.b6_q4]) ///
-      (_b[1.b6_q4] + _b[1b.b6_q4#2.death_strata]) ///
-      (_b[2.b6_q4] + _b[2.b6_q4#2.death_strata]) ///
-      (_b[3.b6_q4] + _b[3.b6_q4#2.death_strata]) ///
-      (_b[4.b6_q4] + _b[4.b6_q4#2.death_strata]) 
+nlcom (_b[1.d3_q4]) (_b[2.d3_q4]) (_b[3.d3_q4]) (_b[4.d3_q4]) ///
+      (_b[1.d3_q4] + _b[1b.d3_q4#2.death_strata]) ///
+      (_b[2.d3_q4] + _b[2.d3_q4#2.death_strata]) ///
+      (_b[3.d3_q4] + _b[3.d3_q4#2.death_strata]) ///
+      (_b[4.d3_q4] + _b[4.d3_q4#2.death_strata]) 
 mata
 b = st_matrix("r(b)")
 V = st_matrix("r(V)")
@@ -95,7 +95,7 @@ mat res_cr = (res_cr, blu,  (`p_interaction',.,.,.,.,.,.,.)')
 mat tab = (res \ res_cr)
 
 // format and output table
-keep b6_q4
+keep d3_q4
 gen cause = ""
 replace cause = "all cause" in 1
 replace cause = "\\ RCC" in 5
@@ -104,7 +104,7 @@ gen group=cond(mod(_n,4)==0, 4, mod(_n,4))
 
 // Paul prefers quartile numbers rather than ranges of values for labels
 // comment out labelling
-*lab val group l_b6_q4
+*lab val group l_d3_q4
 
 svmat tab
 

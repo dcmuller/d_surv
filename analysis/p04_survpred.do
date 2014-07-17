@@ -11,37 +11,41 @@ version 12.1
 use ./data/d01_cacoh_stset_barlow.dta, clear
 
 // fit model, look at different number of degrees of freedom for baseline
-stpm2 i.b6_q4 i.stage_imputed age_recruitment, scale(hazard) df(2)
-stpm2 i.b6_q4 i.stage_imputed age_recruitment, scale(hazard) df(3)
-stpm2 i.b6_q4 i.stage_imputed age_recruitment, scale(hazard) df(4)
-stpm2 i.b6_q4 i.stage_imputed age_recruitment, scale(hazard) df(5)
+stpm2 i.d3_q4 i.stage_imputed age_recruitment, scale(hazard) df(2)
+stpm2 i.d3_q4 i.stage_imputed age_recruitment, scale(hazard) df(3)
+stpm2 i.d3_q4 i.stage_imputed age_recruitment, scale(hazard) df(4)
+stpm2 i.d3_q4 i.stage_imputed age_recruitment, scale(hazard) df(5)
 
 // looks like 3 df is sufficient
-stpm2 i.b6_q4 i.stage_imputed age_recruitment, scale(hazard) df(3)
+
+// interaction with stage
+gen stage3 = stage_imputed-1
+replace stage3 = stage_imputed if stage_imputed==1
+stpm2 i.d3_q4##i.stage3 age_recruitment, scale(hazard) df(3)
 
 // create new data for predictions
-keep b6_q4
+keep d3_q4
 drop if _n>0
 range _t 0 5 101
+expand 3
+bys _t: gen stage3 = _n
 expand 4
-bys _t: gen stage_imputed = _n
-expand 4
-bys _t stage_imputed: replace b6_q4 = _n
-sort stage_imputed b6_q4 _t
+bys _t stage3: replace d3_q4 = _n
+sort stage3 d3_q4 _t
 gen _d = .
 gen _t0 = .
 gen age_recruitment = 60
 predict surv, surv ci timevar(_t)
 
 rename _t time
-rename stage_imputed stage
+rename stage3 stage
 
-list b6_q4 time stage surv* if time==2
-list b6_q4 time stage surv* if time==5
+list d3_q4 time stage surv* if time==2
+list d3_q4 time stage surv* if time==5
 
-keep time stage b6_q4 surv*
-outsheet using ./analysis/output/o04_survpred_b6_stage.csv, c replace
-save ./analysis/output/o04_survpred_b6_stage.dta, replace
+keep time stage d3_q4 surv*
+outsheet using ./analysis/output/o04_survpred_d3_stage.csv, c replace
+save ./analysis/output/o04_survpred_d3_stage.dta, replace
 
 ***************************************************
 log close

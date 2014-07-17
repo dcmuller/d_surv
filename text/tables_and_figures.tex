@@ -1,4 +1,4 @@
-%% vitamin B6 and survival from Kidney cancer (K2 study)
+%% vitamin D$_3$ and survival from Kidney cancer (K2 study)
 %% tables and figures
 
 \documentclass[a4paper,10pt]{article}
@@ -53,14 +53,14 @@ status at the end of follow-up.}
 %% HR table
 \begin{table}
 \caption{Hazard ratios (HR) [95\% confidence intervals (CI)] for risk of all 
-cause and cause specific mortality by categories of circulating vitamin B6 
+cause and cause specific mortality by categories of circulating vitamin D$_3$ 
 concentration.}
 \begin{tabular}{lrrrrrrrr}
 \toprule
 & & &\multicolumn{3}{c}{minimally adjusted$^\dag$} & 
 \multicolumn{3}{c}{adjusted$^\ddag$} \\
  \cmidrule(r){4-6} \cmidrule(l){7-9} 
-& B6 group & $N_{\text{deaths}}$ & HR & [95\% CI] & $p$ & HR & [95\% CI] & 
+& D$_3$ group & $N_{\text{deaths}}$ & HR & [95\% CI] & $p$ & HR & [95\% CI] & 
 $p$ \\
 \midrule
 \input{../analysis/output/o03_hr_table.tex}
@@ -73,7 +73,7 @@ sex \newline
 $^\ddag$Additionally adjusted for BMI (kg/m$^2$), smoking status, cigarettes 
 per day, alcohol drinking status, and alcohol intake per day (mL) \newline
 $^*p$-values for the all-cause models are from tests against the null 
-hypothesis that the vitamin B6 coefficients are identically 0. 
+hypothesis that the vitamin D$_3$ coefficients are identically 0. 
 \newline
 $^{\S}p$-values for the competing risks model are from tests against the null 
 hypothesis of no heterogeneity of the coefficients by cause of death (RCC 
@@ -86,7 +86,7 @@ versus non-RCC).
 \begin{figure}
  \centering
 \caption{Hazard ratios (HR) and 95\% confidence intervals (CI) for a 
-doubling in vitamin B6 concentration by potential effect modifiers. 
+doubling in vitamin D$_3$ concentration by potential effect modifiers. 
 \footnotesize{Estimates derived from Cox models stratified by country of 
 recruitment, and adjusted for stage, age at recruitment, and sex. $p$-values 
 are from Wald tests of the interaction terms.}}
@@ -94,15 +94,16 @@ are from Wald tests of the interaction terms.}}
 \end{figure}
 
 
-%% Model based survival by b6 and stage
+%% Model based survival by d3 and stage
 \begin{figure}
  \centering 
 \caption{\textbf{Model based survival function by categories of 
 circulating 
-vitamin B6 and stage.} \footnotesize{Estimates derived from flexible 
-parametric survival models assuming proportional hazards for B6 categories, no 
-interaction between stage and B6 categories, and a diagnosis age of 60y.}} 
-\includegraphics[width=14cm]{../analysis/output/g05_surv_b6_stage.pdf}
+vitamin D$_3$ and stage.} \footnotesize{Estimates derived from flexible 
+parametric survival models assuming proportional hazards for D$_3$ categories, 
+no 
+interaction between stage and D$_3$ categories, and a diagnosis age of 60y.}} 
+\includegraphics[width=14cm]{../analysis/output/g05_surv_d3_stage.pdf}
 \end{figure}
 
 \clearpage
@@ -111,13 +112,14 @@ interaction between stage and B6 categories, and a diagnosis age of 60y.}}
 \caption*{Supplementary Table 1: Hazard ratios (HR) [95\% confidence intervals 
 (CI)] for risk of 
 relapse free survival, and from a competing risks model of relapse versus 
-death, by categories of circulating vitamin B6 concentration.}
+death, by categories of circulating vitamin D$_3$ concentration.}
 \begin{tabular}{lrrrrrrrr}
 \toprule
 & & &\multicolumn{3}{c}{minimally adjusted$^\dag$} & 
 \multicolumn{3}{c}{adjusted$^\ddag$} \\
  \cmidrule(r){4-6} \cmidrule(l){7-9} 
-& B6 group & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ & HR & [95\% CI] 
+& D$_3$ group & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ & HR & [95\% 
+CI] 
 & 
 $p$ \\
 \midrule
@@ -135,7 +137,7 @@ sex \newline
 $^\ddag$Additionally adjusted for BMI (kg/m$^2$), smoking status, cigarettes 
 per day, alcohol drinking status, and alcohol intake per day (mL) \newline
 $^*p$-values for the relapse free models are from tests against the null 
-hypothesis that the vitamin B6 coefficients are identically 0. \newline
+hypothesis that the vitamin D$_3$ coefficients are identically 0. \newline
 $^{\S}p$-values for the competing risks model are from tests against the null 
 hypothesis of no difference between the coefficients for relapse versus death.
 }
@@ -147,12 +149,12 @@ hypothesis of no difference between the coefficients for relapse versus death.
 \caption*{Supplementary Table 2: Hazard ratios$^\dag$ (HR) [95\% confidence 
 intervals 
 (CI)] for risk of all 
-cause and cause specific mortality by categories of circulating vitamin B6 
+cause and cause specific mortality by categories of circulating vitamin D$_3$ 
 concentration, additionally adjusting for grade (participants with missing 
 grade excluded).}
 \begin{tabular}{lrrrrrrrr}
 \toprule
-& B6 group & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ \\
+& D$_3$ group & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ \\
 \midrule
 \input{../analysis/output/o10_hr_grade_adj.tex}
 \bottomrule
@@ -164,7 +166,7 @@ BMI (kg/m$^2$), smoking status, cigarettes per day, alcohol drinking status,
 alcohol intake per day (mL), and grade (with participants with missing grade 
 excluded).\newline
 $^*p$-values for the relapse free models are from tests against the null 
-hypothesis that the vitamin B6 coefficients are identically 0. \newline
+hypothesis that the vitamin D$_3$ coefficients are identically 0. \newline
 $^{\S}p$-values for the competing risks model are from tests against the null 
 hypothesis of no difference between the coefficients for relapse versus death.
 }

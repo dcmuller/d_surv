@@ -17,6 +17,6 @@ recode bmi_g3 .=3 if bmi_current < .
 
 stcox i.bmi_g3 i.sex age_recruitment  
 stcox i.bmi_g3 i.sex age_recruitment i.stage_imputed  
-stcox i.bmi_g3 i.sex age_recruitment i.stage_imputed i.b6_q4
+stcox i.bmi_g3 i.sex age_recruitment i.stage_imputed i.d3_q4
 
 log close

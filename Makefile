@@ -49,7 +49,7 @@ analysis/p04_survpred.do : ./data/d01_cacoh_stset_barlow.dta
 	touch $@
 	stata-se -b $@
 
-analysis/p05_plot_survival.r : ./analysis/output/o04_survpred_b6_stage.csv
+analysis/p05_plot_survival.r : ./analysis/output/o04_survpred_d3_stage.csv
 	touch $@
 	R CMD BATCH --no-save --no-restore $@
 
@@ -154,29 +154,29 @@ analysis/output/?10* : ./analysis/p10*
 	cd text && latexmk -pdf tables_and_figures.tex
 	cd text && latexmk -c tables_and_figures.tex
 
-./text/rccsurv_vitb.tex: $(output)
-	touch $@
-	cd text && latexmk -pdf rccsurv_vitb.tex
-	cd text && latexmk -c rccsurv_vitb.tex
+#./text/rccsurv_vitd.tex: $(output)
+#	touch $@
+#	cd text && latexmk -pdf rccsurv_vitb.tex
+#	cd text && latexmk -c rccsurv_vitb.tex
 
 # pdf files in text depend on their tex file, and possibly a bib database
 ./text/tables_and_figures.pdf : ./text/tables_and_figures.tex
 	cd text && latexmk -pdf tables_and_figures.tex
 	cd text && latexmk -c tables_and_figures.tex
 
-./text/rccsurv_vitb.pdf : 	./text/rccsurv_vitb.tex \
-       				./text/bibtex/*.bib
-	cd text && latexmk -pdf rccsurv_vitb.tex
-	cd text && latexmk -c rccsurv_vitb.tex
-
-./text/rccsurv_vitb.rtf : ./text/rccsurv_vitb.tex \
-  			  ./text/bibtex/*.bib
-	cd text && pdflatex 	rccsurv_vitb.tex
-	cd text && bibtex    	rccsurv_vitb.aux
-	cd text && pdflatex 	rccsurv_vitb.tex
-	cd text && pdflatex 	rccsurv_vitb.tex
-	cd text && pdflatex 	rccsurv_vitb.tex
-	cd text && latex2rtf 	rccsurv_vitb.tex
-	cd text && latexmk -pdf rccsurv_vitb.tex
-	cd text && latexmk -c 	rccsurv_vitb.tex
+#./text/rccsurv_vitd.pdf : 	./text/rccsurv_vitb.tex \
+#       				./text/bibtex/*.bib
+#	cd text && latexmk -pdf rccsurv_vitb.tex
+#	cd text && latexmk -c rccsurv_vitb.tex
+#
+#./text/rccsurv_vitd.rtf : ./text/rccsurv_vitb.tex \
+#  			  ./text/bibtex/*.bib
+#	cd text && pdflatex 	rccsurv_vitb.tex
+#	cd text && bibtex    	rccsurv_vitb.aux
+#	cd text && pdflatex 	rccsurv_vitb.tex
+#	cd text && pdflatex 	rccsurv_vitb.tex
+#	cd text && pdflatex 	rccsurv_vitb.tex
+#	cd text && latex2rtf 	rccsurv_vitb.tex
+#	cd text && latexmk -pdf rccsurv_vitb.tex
+#	cd text && latexmk -c 	rccsurv_vitb.tex
 

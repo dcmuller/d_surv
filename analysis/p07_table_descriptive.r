@@ -23,7 +23,7 @@ tabdat <- with(analysis,
                                                        "Former smoker",
                                                        "Current smoker")),
                           "Age at recruitment (years)"=cut(age_recruitment, 
-                                                           breaks=c(min(age_recruitment, na.rm=TRUE),55,65,75,max(age_recruitment, na.rm=TRUE)),
+                                                           breaks=c(min(age_recruitment, na.rm=TRUE),55,65,max(age_recruitment, na.rm=TRUE)),
                                                            right=FALSE,
                                                            include.lowest=TRUE),
                           "BMI (kg/m$^2$)"=cut(bmi_current,
@@ -32,7 +32,7 @@ tabdat <- with(analysis,
                                                        max(bmi_current, na.rm=TRUE)),
                                               right=FALSE,
                                               include.lowest=TRUE),
-                          "Circulating B6 (nmol/L)"=b6_q4,
+                          "Circulating vitamin D (nmol/L)"=d3_q4,
                           "Vital status"=factor(vitalstatus, labels=c("alive", "dead")),
                           "Total"="Total",
                           check.names=FALSE))
@@ -46,7 +46,7 @@ t1 <- tabular(Total + Literal("\\\\ %") + Sex + Literal("\\\\  %") +
                 Smoking + Literal("\\\\ %") + Diabetic + Literal("\\\\ %") + 
                 Hypertension + Literal("\\\\ %") + Stage + Literal("\\\\ %") +
                 Grade + Literal("\\\\ %") + Histology + Literal("\\\\ %") + 
-                `Circulating B6 (nmol/L)` 
+                `Circulating vitamin D (nmol/L)` 
               ~ (`Vital status`*((n=1) + 
                                   Paste(Percent("col"), 
                                         digits=0, prefix="(", postfix=")", 

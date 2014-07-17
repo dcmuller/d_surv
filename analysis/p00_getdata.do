@@ -145,22 +145,48 @@ lab def l_b6_q4 1 "1 [`qmin',`q25')" ///
                 4 "4 [`q75',`qmax']"
 lab val b6_q4 l_b6_q4
 
-su vd3_h if subcohort==1, d
+
+** vitamin d adjusted for season
+gen recr_day = doy(recr_dte)
+gen double recr_day_unit = recr_day/365
+forval i = 1(1)4 {
+        gen double sin`i'_recr_day = sin(`i' * 2 * _pi * recr_day_unit)
+        gen double cos`i'_recr_day = cos(`i' * 2 * _pi * recr_day_unit)
+        lab var sin`i'_recr_day "seasonality"
+        lab var cos`i'_recr_day "seasonality"
+}
+reg d3_log2 sin1_recr_day cos1_recr_day if subcohort==1
+predict xb1
+reg d3_log2 sin1_recr_day cos1_recr_day ///
+            sin2_recr_day cos2_recr_day if subcohort==1
+predict xb2
+reg d3_log2 sin1_recr_day cos1_recr_day ///
+            sin2_recr_day cos2_recr_day ///
+            sin3_recr_day cos3_recr_day if subcohort==1
+predict xb3
+reg d3_log2 sin1_recr_day cos1_recr_day ///
+            sin2_recr_day cos2_recr_day ///
+            sin3_recr_day cos3_recr_day ///
+            sin4_recr_day cos4_recr_day if subcohort==1
+predict xb4
+tw (scatter d3_log2 recr_day, msymbol(oh)) (line xb? recr_day, sort)
+
+** looks like one pair is sufficient, generate "adjusted" concentration by
+** subtracting the model prediction (seasonal mean)
+gen d3_log2_adj = d3_log2 - xb1
+
+** cut into fourths
+su d3_log2_adj if subcohort==1, d
 local qmin = round(r(min), 0.01)
 local q25 = round(r(p25), 0.01)
 local q50 = round(r(p50), 0.01)
 local q75 = round(r(p75), 0.01)
 local qmax = round(r(max), 0.01)
 gen d3_q4=.
-recode d3_q4 .=1 if vd3_h < `q25'
-recode d3_q4 .=2 if vd3_h < `q50'
-recode d3_q4 .=3 if vd3_h < `q75'
-recode d3_q4 .=4 if vd3_h < . 
-lab def l_d3_q4 1 "1 [`qmin',`q25')" ///
-                2 "2 [`q25',`q50')" ///
-                3 "3 [`q50',`q75')" ///
-                4 "4 [`q75',`qmax']"
-lab val d3_q4 l_d3_q4
+recode d3_q4 .=1 if d3_log2_adj < `q25'
+recode d3_q4 .=2 if d3_log2_adj < `q50'
+recode d3_q4 .=3 if d3_log2_adj < `q75'
+recode d3_q4 .=4 if d3_log2_adj < . 
 
 **************************************************
 // Save
