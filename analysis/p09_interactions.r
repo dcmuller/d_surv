@@ -1,5 +1,4 @@
-#! p08_interactions.r
-#! 20140514 dcmuller
+#! p09_interactions.r
 ## Interactions with log(d3)
 
 ################################################
@@ -200,7 +199,7 @@ CairoFonts(regular    = "Palatino:style=Regular",
            italic     = "Palatino:style=Italic",
            bolditalic = "Palatino:style=Bold Italic,BoldItalic",
            symbol     = "Symbol")
-CairoPDF(file="./analysis/output/g08_interactions.pdf", 
+CairoPDF(file="./analysis/output/g09_interactions.pdf", 
          width=8.2, 
          height=8.5, 
          pointsize=5)

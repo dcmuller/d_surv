@@ -1,5 +1,4 @@
-#! p05_plot_survival.r
-#! v0.01 20140509 dcmuller
+#! p06_plot_survival.r
 
 ################################################
 library(ggplot2)
@@ -13,7 +12,7 @@ library(extrafont)
 
 ################################################
 ## get data
-pred_s <- read.dta("./analysis/output/o04_survpred_d3_stage.dta")
+pred_s <- read.dta("./analysis/output/o05_survpred_d3_stage.dta")
 pred_s$stage <- factor(pred_s$stage, labels=c("I or II", "III", "IV"))
 pred_s$`D3 category` <- factor(pred_s$d3_q4, labels=c("lowest", "2", "3", "highest"))
 #pred_s$`D3 category \n (nmol/L)` <- pred_s$d3_q4 
@@ -38,7 +37,7 @@ CairoFonts(regular    = "Palatino:style=Regular",
            italic     = "Palatino:style=Italic",
            bolditalic = "Palatino:style=Bold Italic,BoldItalic",
            symbol     = "Symbol")
-CairoPDF(file = "./analysis/output/g05_surv_d3_stage.pdf",
+CairoPDF(file = "./analysis/output/g06_surv_d3_stage.pdf",
          width = 5, 
          height = 6.5) 
 p

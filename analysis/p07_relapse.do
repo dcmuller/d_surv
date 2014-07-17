@@ -1,5 +1,4 @@
-*! p06_relapse.do
-*! 20140513 dcmuller
+*! p07_relapse.do
 * create table of HR and CI from Cox models for relapse
 * free survival, and relapse versus death from competing
 * risks models
@@ -7,7 +6,7 @@
 set more off
 clear all
 capture log close
-log using ./analysis/output/l06_relapse.log, replace
+log using ./analysis/output/l07_relapse.log, replace
 version 12.1
 ********************************************************
 local minadj "i.stage_imputed age_recruitment i.sex"
@@ -131,7 +130,7 @@ foreach v of varlist p? {
 }
 keep cause group d e? ci? p?
 keep if _n <=12
-outsheet using ./analysis/output/o06_hr_table_relapse.csv, c replace
-listtex using ./analysis/output/o06_hr_table_relapse.tex, replace rstyle(tabular)
+outsheet using ./analysis/output/o07_hr_table_relapse.csv, c replace
+listtex using ./analysis/output/o07_hr_table_relapse.tex, replace rstyle(tabular)
  
 

@@ -1,11 +1,9 @@
-*! p04_survpred.do
-*! 20140430 dcmuller
-* create table of HR and CI from Cox models
+*! p05_survpred.do
 
 set more off
 clear all
 capture log close
-log using ./analysis/output/l04_survpred.log, replace
+log using ./analysis/output/l05_survpred.log, replace
 version 12.1
 ********************************************************
 use ./data/d01_cacoh_stset_barlow.dta, clear
@@ -44,8 +42,8 @@ list d3_q4 time stage surv* if time==2
 list d3_q4 time stage surv* if time==5
 
 keep time stage d3_q4 surv*
-outsheet using ./analysis/output/o04_survpred_d3_stage.csv, c replace
-save ./analysis/output/o04_survpred_d3_stage.dta, replace
+outsheet using ./analysis/output/o05_survpred_d3_stage.csv, c replace
+save ./analysis/output/o05_survpred_d3_stage.dta, replace
 
 ***************************************************
 log close

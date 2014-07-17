@@ -1,4 +1,4 @@
-#! p07_table_descriptive.r
+#! p08_table_descriptive.r
 ## table 1
 
 ################################################
@@ -54,7 +54,7 @@ t1 <- tabular(Total + Literal("\\\\ %") + Sex + Literal("\\\\  %") +
                  + (Total=(n=1))), 
               data=tabdat)
 test <- booktabs(latex(t1, booktabs=TRUE, 
-                       file="./analysis/output/o07_descriptive_by_vitstat.tex",
+                       file="./analysis/output/o08_descriptive_by_vitstat.tex",
                        caption="Demographic characteristics and covariates by vital status"))
 
 latex(tabular(Factor(Smoking) + Literal("\\newline %") + Factor(Sex) ~ Factor(`Vital status`)*((n=1) + 
