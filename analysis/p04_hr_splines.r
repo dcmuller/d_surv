@@ -148,9 +148,14 @@ p <- p + theme(legend.position="none",
                #panel.grid.major = element_blank(),
                panel.grid.minor = element_blank())
 
+CairoFonts(regular    = "Palatino:style=Regular", 
+           bold       = "Palatino:style=Bold", 
+           italic     = "Palatino:style=Italic",
+           bolditalic = "Palatino:style=Bold Italic,BoldItalic",
+           symbol     = "Symbol")
 CairoPDF(file = "./analysis/output/g04_hr.pdf",
-         width = 8, 
-         height = 6)
+         width = 7, 
+         height = 5)
 print(p)
 dev.off()
 #system("pdf2ps ./analysis/output/g12_hr.pdf ./analysis/output/g12_hr.ps")

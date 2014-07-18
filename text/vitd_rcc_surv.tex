@@ -1,0 +1,408 @@
+%% Vitamin D and RCC survival
+%% draft manuscript
+
+\documentclass[a4paper,11pt]{article}
+%\usepackage[numbers,comma,square,sort&compress]{natbib}
+\usepackage{cite}
+\renewcommand{\citeleft}{(}
+\renewcommand{\citeright}{)}
+\usepackage{setspace}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage{threeparttable}
+\usepackage{color, soul}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  citecolor=black,
+  linkcolor=black,
+}
+
+%% use palatino font
+\usepackage{mathpazo}
+\linespread{1.15}
+
+%% custom captions
+\usepackage[labelformat=empty]{caption}
+
+%% indenting and paragraphing
+\parskip 10pt
+\parindent 25pt
+
+%\renewcommand{\cite}{\citep}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% #1 end preamble. Begin document proper
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\doublespace
+\noindent \textbf{Title:} Circulating 25-Hydroxyvitamin D$_3$ and 
+survival after diagnosis with kidney cancer. 
+
+\noindent \textbf{Authors:} David C Muller$^1$, Mattias Johansson$^1$, David 
+Zaridze$^2$, Vladimir Janout$^3$, Ivana Holcatova$^4$, Lenka Foretova$^5$, Dana 
+Mates$^6$, Paul Brennan$^1$, Ghislaine Scelo$^1$
+
+{\footnotesize 
+\noindent
+1. International Agency for Research on Cancer (IARC), Lyon, France \newline
+2. Russian N.N. Blokhin Cancer Research Centre, Moscow, Russian Federation 
+\newline
+3. Department of Preventive Medicine, Faculty of Medicine, Palacky University, 
+Olomouc, Czech Republic \newline
+4. Charles University in Prague, First Faculty of Medicine, Institute of 
+Hygiene 
+and Epidemiology, Prague, Czech Republic \newline
+5. Department of Cancer Epidemiology and Genetics, Masaryk Memorial Cancer 
+Institute, Brno, Czech Republic \newline
+6. National Institute of Public Health, Bucharest, Romania
+}
+
+\textbf{Corresponding author:} \newline
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% #2 abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+\textbf{Background:} \newline
+\textbf{Methods:} \newline
+\textbf{Results:} \newline
+\textbf{Conclusions:} \newline
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% #3 introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\section*{Introduction}
+More than 300,000 kidney cancer cases are diagnosed yearly worldwide leading to 
+approximately 130,000 deaths \cite{ferlay_cancer_2013}. The prognosis is 
+strongly dependent on stage at diagnosis, with around 90\% of stage I patients 
+alive five years after diagnosis, comparted with only 10\% of stage IV patients 
+\cite{CRUK_kidney_2014}.
+
+Little is known on factors influencing survival after diagnosis of kidney 
+cancer, apart from tumor stage and grade. We recently investigated circulating 
+vitamin D and kidney cancer onset and survival in a prospective epidemiological 
+cohort where blood samples were collected at entry in the cohort, an average 
+of 7 years before diagnosis [Muller et al., in press]. We reported an inverse 
+association between vitamin D concentrations and risk of subsequent kidney 
+cancer, and an increased rate of death after kidney cance diagnosis for both 
+low and high concentrations of vitamin D. Available data did not allow thorough 
+analysis of cause-specific mortality, nor were we able to adjust for stage. This 
+observation prompted us to investigate whether vitamin B6 levels at diagnosis of 
+kidney cancer are predictive of subsequent survival, independent of stage or 
+other prognostic factors.   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% #3 methods 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Methods}
+\subsection*{The K2 study}
+Participants included patients who were above 18 years of age and diagnosed 
+with kidney cancer in one of 6 participating centres in Czech Republic (4 
+centres), Romania (Bucharest), and Russia (Moscow). After obtaining informed 
+consent, participants were given a standardized face-to-face short lifestyle 
+questionnaire covering socio-demographic characteristics, anthropometric 
+measures, medical history, family history, and tobacco and alcohol use. 
+Clinical and pathological data were abstracted from medical charts and 
+pathological reports. A majority of participants underwent nephrectomy and the 
+tumor was histologically confirmed. Follow-up for outcome (relapse, vital 
+status, and cause of death where relevant) was performed every 6 to 12 months 
+after diagnosis, using passive follow-up methods where possible (with 
+confirmation of vital status through active follow-up methods in case of 
+uncertainties) and active follow-up methods when no linkage to databases was 
+possible.
+
+\subsection*{Case-cohort sampling}
+Among 2330 participants with questionnaire data available and a diagnosis of 
+renal cell carcinoma (RCC) according to ICDO-3, we excluded 125 participants 
+with no plasma sample available, 1005 participants with no follow-up data at 
+the time of this project, 5 participants with inconsistencies in reference 
+dates, and 7 participants with no information on stage. From the 1188 
+remaining, we randomly selected 500 participants at baseline (the subcohort). 
+We also included all participants who died during follow-up that were not 
+randomly selected in to the subcohort ($N=93$), as well as 37 stage IV patients 
+that had survived and were not randomly selected, hence a total of 
+630 participants for laboratory analysis. Of these, one subject ended up being 
+classified as spindle cell sarcoma.
+
+\subsection*{Biosample processing and biochemical analysis}
+Venous blood was obtained before or at the time of the nephrectomy, prior to 
+any treatment. Details of blood collection, storage, and transport have 
+been described previously [CITATION]. Liquid chromatography coupled to tandem 
+mass spectrometry was used to separately analyse vitamin D as 25(OH)D$_2$ and 
+25(OH)D$_3$ \cite{midttun_determination_2011}. 25(OH)D$_2$ was undetectable in 
+the majority of samples, so our analyses focus on 25(OH)D$_3$. The lab is DEQAS 
+(www.deqas.org) certified.
+
+\subsection*{Statistical analysis}
+To adjust for seasonal variation, we modeled the expected log$_2$ 25(OH)D$_3$ 
+concentration as a periodic function of day of blood draw using a pair of sine 
+and cosine functions. To create season-adjusted categories, we grouped the 
+residuals from this model at quartiles of their distribution among the randomly 
+selected subcohort. We used Cox proportional hazards models with time since 
+diagnosis (recruitment) as the time scale to estimate hazard ratios (HR) and 
+95\% confidence intervals (CI) for all-cause mortality by the season-adjusted 
+categories of 25(OH)D$_3$. We also modeled 25(OH)D$_3$ continuously using 
+restricted cubic splines with knots at its 10th, 33rd, 67th, and 90th 
+percentiles, explicitly adjusting for seasonality by including the pair of sine 
+and cosine functions. HRs for cause-specific mortality were calculated in a 
+competing risks model using the data augmentation method 
+\cite{lunn_applying_1995}. To account for the case-cohort design 
+\cite{prentice_case-cohort_1986} we used Barlow's method to weight the 
+likelihood and computed robust variance estimates \cite{barlow_robust_1994, 
+barlow_analysis_1999}. We investigated potential effect modification by fitting 
+interactions between season-adjusted log$_2$ 25(OH)D$_3$ and various factors. 
+All models included stage, age at recruitment, and sex as covariates, with the 
+baseline hazard stratified by country of recruitment. We additionally adjusted 
+for body mass index (BMI, kg/m$^2$), smoking status (never, former, current), 
+and alcohol drinking status (never, former, current).
+All $p$-values are two sided, and were calculated using the Wald test. 
+Statistical analyses were performed using Stata 12.1 for Linux (Stata 
+Corporation, College Station, Texas, US) and R version 3.1.1 \cite{r_2014}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% #4 results
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Results}
+Demographic and clinical characteristics of the study sample by vital status at 
+the end of follow-up are presented in Table~1. The sample included a higher 
+proportion of men (63\%) than women, and were predominantly recruited from the 
+Czech Republic (52\%) and Russia (43\%), with only 5\% or participants 
+recruited in Romania. Those participants who survived to the end of follow-up 
+had a similar age distribution to those who died during follow-up. 518 
+of the 630 cases (82\%) were conventional RCC. 50\% of deaths occurred among 
+participants with a stage IV tumor, and 15\% of those surviving to the end of 
+follow-up had stage IV diagnoses. In contrast, 72 \% of those surviving to the 
+end of follow-up were diagnosed with stage I-II disease.
+
+Hazard of death from any cause was strongly and inversely associated with 
+circulating concentrations of 25(OH)D$_3$ (Table~2). After adjusting for 
+stage, age, and sex, the hazard was 43\% lower among those in the highest 
+compared to the lowest group of seasonally-adjusted concentration 
+(HR$_{4\text{vs}1}$ 0.57, 95\% CI [0.34, 0.97]). A competing risks analysis 
+found no evidence of heterogeneity by cause of death, suggesting that this 
+association was not specific to deaths from RCC (Table~2). The HR for 
+continuously varying 25(OH)D$_3$ (relative to a concentration of 50 nmol/L) is 
+presented in Figure~1. These estimates corroborate those in Table~2, suggesting 
+a monotonic inverse association between 25(OH)D$_3$ and hazard of death.
+
+Figure~2 presents HRs for a doubling in seasonally adjusted 25(OH)D$_3$ 
+concentration separately by categories of several potential effect modifiers. 
+The estimated magnitude of the association was consistent by, sex, stage, 
+histology, history of diabetes, smoking status, and alcohol intake status. 
+There was some indication that the association might be stronger among those 
+diagnosed at age 65 years or older, those with a history of hypertension, those 
+with higher BMI, or those diagnosed with stage I or II RCC, but there was 
+little statistical evidence of interaction with any of these factors. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% #4 discussion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Discussion}
+We investigated whether differences in circulating concentrations of 
+25(OH)D$_3$ at the time of diagnosis of RCC were associated with all-cause and 
+cause-specific survival. We observed that higher concentrations of 25(OH)D$_3$ 
+were associated with a substantially lower risk of death, and that the 
+associatin was not restricted to RCC specific death. We also observed an 
+indication that the strength of this association might vary by other factors.
+Most notably the association appeared somewhat stronger for those with a 
+history of hypertension, advanced age at diagosis, or eary stage disease.
+
+\clearpage
+\bibliographystyle{./bibtex/aje}
+\bibliography{./bibtex/library_vitd}
+\end{document}
+Previous reports of prospectively measured circulating 25(OH)D and risk of 
+kidney cancer have produced conflicting results. In accordance with our 
+results, the Copenhagen City Heart Study (CCHS), a cohort of 9791 people 
+including 55 incident kidney cancer cases, reported that a 50\% reduction in 
+25(OH)D was associated with increased risk (HR 1.34, 95\% CI [1.04, 1.73]) 
+\cite{afzal_low_2013}. In contrast, the vitamin D pooling project found no 
+association in an analysis of 775 case-control pairs nested within eight 
+prospective cohorts \cite{gallicchio_circulating_2010-1}. These discrepant 
+results are not readily explicable. One difference between the pooling project 
+and the present study is the method of adjustment for season. The pooling 
+project used conditional logistic regression models adjusted for season of blood 
+draw (summer/winter), with sensitivity analyses adjusted using the residuals 
+from a local polynomial regression \cite{gallicchio_circulating_2010}. 
+In contrast, we directly modelled seasonality using smooth trigonometric 
+functions. Another difference between the studies is that both the pooling 
+project and CCHS used a chemiluminescence immunoassay measuring both
+25(OH)D$_2$ and 25(OH)D$_3$, whereas in the present study we employed liquid 
+chromatography coupled to tandem mass spectrometry to quantify 25(OH)D$_3$ 
+specifically. That said, these 
+methodological differences would seem unlikely to fully account for the 
+discrepant results which remain unexplained. 
+
+There is a large literature investigating circulating vitamin D and all-cause 
+mortality in general populations. Consistent with our observation, many studies 
+have reported increased risk of death for people with low concentrations 
+\cite{schottker_strong_2013, virtanen_association_2011, hutchinson_low_2010, 
+szulc_serum_2009, semba_low_2009, pilz_vitamin_2009, 
+melamed_ml_25-hydroxyvitamin_2008, jia_nutritional_2007}. This suggests that 
+the association observed in our study may not be specific to post RCC survival, 
+but rather a reflection of a general phenomenon. Our observation that high 
+levels of 25(OH)D$_3$ might be associated with increased risk of death is 
+consistent with results from the Uppsala Longitudinal Study of Adult Men, which 
+also suggest a U-shaped association \cite{michaelsson_plasma_2010}. Despite 
+this accord, further studies are required to investigate the intriguing 
+possibility that both low and high concentrations are associated with all-cause 
+mortality.
+
+The principal limitation of our study is that 25(OH)D$_3$ was measured using a 
+single blood sample drawn in adulthood. While individual vitamin D measurements 
+are reasonably reproducible, intra-individual variation may still be important 
+\cite{major_variability_2013}. Further, it is possible that this single  
+measurement in adulthood does not capture exposure to vitamin D in an 
+etiologically relevant period. 
+
+Our study does have several strengths. Importantly, our sample includes 
+participants from 10 European countries from differing geographic latitudes, 
+and a wide range of 25(OH)D$_3$ concentrations. Biospecimen handling was 
+standardised, and quantification of circulating 25(OH)D$_3$ took place in a 
+single laboratory, thus minimising systematic inter-laboratory variation. The 
+prospective design of our study, in which 25(OH)D$_3$ concentrations were 
+assessed using blood collected prior to diagnosis, minimises the chance that 
+any differences between cases and controls are caused by existing tumours. 
+Further, the availability of detailed information on potential confounders -- 
+particularly the inclusion of circulating cotinine as a biomarker of current 
+smoking intensity and creatinine as a marker of renal function --  affords 
+additional confidence that the observed associations are not due to residual 
+confounding. 
+
+In conclusion, we found that low concentrations of 25(OH)D$_3$ were associated 
+with increased risk of RCC as well as lower all-cause mortality among RCC 
+cases. High concentrations of 25(OH)D$_3$ might also be associated with 
+increased risk of all-cause mortality among RCC cases.
+
+\section*{acknowledgements}
+
+
+\noindent Funding:
+The World Cancer Research Fund (UK) supported the biochemical analyses. The 
+funding organization had no role in design and conduct of the study; collection, 
+management, analysis, and interpretation of the data; preparation, review, or 
+approval of the manuscript. The work undertaken by DCM that was reported in this 
+paper was done so during the tenure of an IARC-Australia Postdoctoral Fellowship 
+from the International Agency for Research on Cancer, supported by the Cancer 
+Council Australia. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% #5 references
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\bibliographystyle{./bibtex/aje}
+\bibliography{./bibtex/library_vitd}
+
+\clearpage
+\section*{Tables}
+
+%% Table 1: Descriptive table
+\input{../analysis/output/o10_table_descriptive.tex}
+\clearpage
+
+%% Table 2: table of estimates from relative risk models
+\input{../analysis/output/o11_table_riskmodels.tex}
+\clearpage
+
+%% Appendix Table 1: Distribution of vit d by Country
+\input{../analysis/output/o10_table_d3_dist.tex}
+\clearpage
+
+
+\section*{Figure legends}
+\noindent \textbf{Figure 1.} Seasonal variation of 25(OH)D$_3$ 
+concentrations. Scattered points show the measured values. The solid line 
+represents the predicted geometric mean concentration given day of blood draw, 
+which was modeled as a linear combination of sine and cosine functions. See the 
+text of the methods section for further details. Estimates and data are from a 
+nested European Prospective investigation into Cancer and Nutrition (EPIC) 
+study, 
+which recruited participants between 1992 and 2000. \newline \newline
+
+\noindent \textbf{Figure 2.} Odds ratio for RCC as a function of 
+circulating  concentration of 25(OH)D$_3$, relative to a concentration of 
+50~nmol/L. Log-base-2 25(OH)D$_3$ was modeled as a continuous 
+covariate. Solid and dashed 
+lines represent the maximum likelihood estimates and 95\% 
+confidence intervals respectively. The translucent lines are 1000 draws from 
+the 
+multivariate normal distribution defined by the maximum likelihood estimates 
+and 
+their variance covariance matrix, and thus give an indication of the posterior 
+density for the odds ratio under a uniform prior on the regression 
+coefficients. 
+The ``rug plot'' under each panel shows the observed distribution of 
+25(OH)D$_3$. Estimates and data are from a nested case-control sample within 
+the European Prospective investigation into Cancer and Nutrition (EPIC) study, 
+which recruited participants between 1992 and 2000. \newline
+\noindent Panel A) Estimates adjusted for age at baseline, sex, country, and 
+seasonality (sine and cosine functions of day of blood draw).  \newline 
+\noindent Panel B) Estimates after additional adjustment for smoking status at 
+baseline (never/former/current), circulating cotinine (quartiles defined among 
+the controls), alcohol intake at recruitment (g/day), and body mass index 
+(kg/m$^2$).  \newline \newline
+
+\noindent \textbf{Figure 3.} Stratified odds ratios (95\% CI) for 
+RCC for a doubling in concentration of 25(OH)D$_3$. Estimates are adjusted for 
+age at baseline, sex, country, seasonality (sine and cosine functions of day of 
+blood draw), smoking status at baseline (never/former/current), circulating 
+cotinine (quartiles defined among the controls), alcohol intake at recruitment 
+(g/day), and body mass index (kg/m$^2$). Estimates are from a nested 
+case-control sample within the European Prospective investigation into Cancer 
+and Nutrition (EPIC) study, which recruited participants between 1992 and 2000. 
+\newline
+$^a$P-value from likelihood ratio test of interaction terms. \newline
+Abbreviations: OR, Odds Ratio; CI, Confidence Interval; BMI, Body Mass Index.  
+\newline \newline
+
+\noindent \textbf{Figure 4. Post RCC survival. Estimates from a nested 
+case-control sample within the European Prospective investigation into Cancer 
+and Nutrition (EPIC) study, which recruited participants between 1992 and 
+2000.} \newline
+\noindent Panel A) Hazard ratio from a Cox model for all cause mortality post 
+RCC 
+diagnosis as a function of circulating concentration of 25(OH)D$_3$, 
+relative to a concentration of 50~nmol/L. 25(OH)D$_3$ was modeled 
+using 
+restricted cubic splines with knots at the 10th, 33rd, 67th, and 90th 
+percentiles of its distribution. The model was adjusted for age at baseline, 
+sex, country, and seasonality (sine and cosine functions of day of blood draw), 
+smoking status at baseline (never/former/current), circulating cotinine 
+(quartiles defined among the controls), alcohol intake at recruitment (g/day), 
+and body mass index (kg/m$s^2$). Solid and 
+dashed lines represent the maximum likelihood estimates and 95\% confidence 
+intervals respectively. The translucent lines are 1000 draws from the 
+multivariate normal distribution defined by the maximum likelihood estimates 
+and 
+their variance covariance matrix, and thus give an indication of the posterior 
+density for the hazard ratio under a uniform prior on the regression 
+coefficients. The ``rug plot'' shows the observed distribution of 
+25(OH)D$_3$. 
+\newline 
+\noindent Panel B) Survival function post RCC diagnosis evaluated at given 
+concentrations 
+of 25(OH)D$_3$, derived from a flexible parametric survival model. 
+Restricted cubic splines with knots at the 0th, 33rd, 67th, and 100th 
+percentiles of the distribution of uncensored survival times were used to model 
+the baseline hazard. Like the Cox model used to derive panel A, 
+25(OH)D$_3$ was modeled using restricted cubic splines with knots at 
+the 10th, 33rd, 67th, and 90th percentiles of its distribution.
+
+\end{document}

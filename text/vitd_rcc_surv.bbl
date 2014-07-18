@@ -1,0 +1,56 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{ferlay_cancer_2013}
+Ferlay J, Steliarova-Foucher E, Lortet-Tieulent J, et~al.
+\newblock Cancer incidence and mortality patterns in Europe: Estimates for 40
+  countries in 2012.
+\newblock \emph{European Journal of Cancer} .
+  2013;\hspace{0pt}49(6):1374--1403.
+\newblock
+  \urlprefix\url{http://www.ejcancer.com/article/S0959804913000075/abstract}.
+
+\bibitem{CRUK_kidney_2014}
+Statistics and outlook for kidney cancer. 2014.
+\newblock
+  \urlprefix\url{http://www.cancerresearchuk.org/cancer-help/type/kidney-cancer/treatment/statistics-and-outlook-for-kidney-cancer#stage}.
+\newblock Accessed: 28 May 2014.
+
+\bibitem{midttun_determination_2011}
+Midttun Ã, Ueland PM.
+\newblock Determination of vitamins A, D and E in a small volume of human
+  plasma by a high-throughput method based on liquid chromatography/tandem mass
+  spectrometry.
+\newblock \emph{Rapid Communications in Mass Spectrometry} .
+  2011;\hspace{0pt}25(14):1942â€“1948.
+
+\bibitem{lunn_applying_1995}
+Lunn M, {McNeil} D.
+\newblock Applying Cox Regression to Competing Risks.
+\newblock \emph{Biometrics} . 1995;\hspace{0pt}51(2):524.
+
+\bibitem{prentice_case-cohort_1986}
+Prentice RL.
+\newblock A case-cohort design for epidemiologic cohort studies and disease
+  prevention trials.
+\newblock \emph{Biometrika} . 1986;\hspace{0pt}73(1):1--11.
+
+\bibitem{barlow_robust_1994}
+Barlow WE.
+\newblock Robust variance estimation for the case-cohort design.
+\newblock \emph{Biometrics} . 1994;\hspace{0pt}50(4):1064--1072.
+
+\bibitem{barlow_analysis_1999}
+Barlow WE, Ichikawa L, Rosner D, et~al.
+\newblock Analysis of Case-Cohort Designs.
+\newblock \emph{Journal of Clinical Epidemiology} .
+  1999;\hspace{0pt}52(12):1165--1172.
+
+\bibitem{r_2014}
+{R Core Team}.
+\newblock \emph{R: A Language and Environment for Statistical Computing}.
+\newblock Vienna, Austria. 2014.
+
+\end{thebibliography}
