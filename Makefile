@@ -165,14 +165,14 @@ analysis/output/?10* : ./analysis/p10*
 	cd text && latexmk -pdf vitd_rcc_surv.tex
 	cd text && latexmk -c vitd_rcc_surv.tex
 
-#./text/rccsurv_vitd.rtf : ./text/rccsurv_vitb.tex \
+#./text/vitd_rcc_surv.rtf : ./text/vitd_rcc_surv.tex \
 #  			  ./text/bibtex/*.bib
-#	cd text && pdflatex 	rccsurv_vitb.tex
-#	cd text && bibtex    	rccsurv_vitb.aux
-#	cd text && pdflatex 	rccsurv_vitb.tex
-#	cd text && pdflatex 	rccsurv_vitb.tex
-#	cd text && pdflatex 	rccsurv_vitb.tex
-#	cd text && latex2rtf 	rccsurv_vitb.tex
-#	cd text && latexmk -pdf rccsurv_vitb.tex
-#	cd text && latexmk -c 	rccsurv_vitb.tex
-
+#	cd text && pdflatex 	vitd_rcc_surv.tex
+#	cd text && bibtex    	vitd_rcc_surv.aux
+#	cd text && pdflatex 	vitd_rcc_surv.tex
+#	cd text && pdflatex 	vitd_rcc_surv.tex
+#	cd text && pdflatex 	vitd_rcc_surv.tex
+#	cd text && latex2rtf 	vitd_rcc_surv.tex
+#	cd text && latexmk -pdf vitd_rcc_surv.tex
+#	cd text && latexmk -c 	vitd_rcc_surv.tex
+#
