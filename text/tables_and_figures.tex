@@ -53,7 +53,7 @@ status at the end of follow-up.}
 %% HR table
 \begin{table}
 \caption{Hazard ratios (HR) [95\% confidence intervals (CI)] for risk of all 
-cause and cause specific mortality by categories of 25(OH)D$_3$ 
+cause and cause specific mortality by season-adjusted categories of 25(OH)D$_3$ 
 concentration.}
 \begin{tabular}{lrrrrrrrr}
 \toprule
@@ -74,7 +74,7 @@ sex \newline
 $^\ddag$Additionally adjusted for BMI (kg/m$^2$), smoking status, cigarettes 
 per day, alcohol drinking status, and alcohol intake per day (mL) \newline
 $^*p$-values for the all-cause models are from tests against the null 
-hypothesis that the vitamin D$_3$ coefficients are identically 0. 
+hypothesis that the 25(OH)D$_3$ coefficients are identically 0. 
 \newline
 $^{\S}p$-values for the competing risks model are from tests against the null 
 hypothesis of no heterogeneity of the coefficients by cause of death (RCC 
@@ -91,7 +91,8 @@ circulating concentration of 25(OH)D$_3$ at diagnosis, relative to a
 concentration of 50~nmol/L. 25(OH)D$_3$ was modeled using restricted cubic 
 splines with knots at the 10th, 33rd, 67th, and 90th percentiles of its 
 distribution. Estimates were derived from a Cox model stratified by country of 
-recruitment, and adjusted for stage, age at recruitment, and sex. Solid and 
+recruitment, and adjusted for stage, age at recruitment, sex, and seasonality 
+(sine and cosine functions of day of blood draw). Solid and 
 dashed lines represent the maximum pseudolikelihood estimates and 95\% 
 confidence intervals respectively. The translucent lines are 1000 draws from 
 the multivariate normal distribution defined by the maximum pseudolikelihood 
