@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 \providecommand{\eprint}[2][]{\url{#2}}
@@ -52,5 +52,59 @@ Barlow WE, Ichikawa L, Rosner D, et~al.
 {R Core Team}.
 \newblock \emph{R: A Language and Environment for Statistical Computing}.
 \newblock Vienna, Austria. 2014.
+
+\bibitem{schottker_strong_2013}
+Sch\"ottker B, Haug U, Schomburg L, et~al.
+\newblock Strong associations of 25-hydroxyvitamin D concentrations with
+  all-cause, cardiovascular, cancer, and respiratory disease mortality in a
+  large cohort study.
+\newblock \emph{The American Journal of Clinical Nutrition} .
+  2013;\hspace{0pt}97(4):782--793.
+
+\bibitem{virtanen_association_2011}
+Virtanen JK, Nurmi T, Voutilainen S, et~al.
+\newblock Association of serum 25-hydroxyvitamin D with the risk of death in a
+  general older population in Finland.
+\newblock \emph{European Journal of Nutrition} .
+  2011;\hspace{0pt}50(5):305--312.
+
+\bibitem{hutchinson_low_2010}
+Hutchinson MS, Grimnes G, Joakimsen RM, et~al.
+\newblock Low serum 25-hydroxyvitamin D levels are associated with increased
+  all-cause mortality risk in a general population: the Troms\o¸ study.
+\newblock \emph{European Journal of Endocrinology} .
+  2010;\hspace{0pt}162(5):935--942.
+
+\bibitem{szulc_serum_2009}
+Szulc P, Claustrat B, Delmas PD.
+\newblock Serum concentrations of $17\beta$-E$_2$ and 25-hydroxycholecalciferol
+  ({25OHD)} in relation to all-cause mortality in older men -- the {MINOS}
+  study.
+\newblock \emph{Clinical Endocrinology} . 2009;\hspace{0pt}71(4):594--602.
+
+\bibitem{semba_low_2009}
+Semba RD, Houston DK, Ferrucci L, et~al.
+\newblock Low serum 25-hydroxyvitamin D concentrations are associated with
+  greater all-cause mortality in older community-dwelling women.
+\newblock \emph{Nutrition Research} . 2009;\hspace{0pt}29(8):525--530.
+
+\bibitem{pilz_vitamin_2009}
+Pilz S, Dobnig H, Nijpels G, et~al.
+\newblock Vitamin D and mortality in older men and women.
+\newblock \emph{Clinical Endocrinology} . 2009;\hspace{0pt}71(5):666--672.
+
+\bibitem{melamed_ml_25-hydroxyvitamin_2008}
+{Melamed {ML}}, {Michos {ED}}, {Post W}, et~al.
+\newblock 25-hydroxyvitamin d levels and the risk of mortality in the general
+  population.
+\newblock \emph{Archives of Internal Medicine} .
+  2008;\hspace{0pt}168(15):1629--1637.
+
+\bibitem{jia_nutritional_2007}
+Jia X, Aucott LS, {McNeill} G.
+\newblock Nutritional status and subsequent all-cause mortality in men and
+  women aged 75 years or over living in the community.
+\newblock \emph{British Journal of Nutrition} .
+  2007;\hspace{0pt}98(03):593--599.
 
 \end{thebibliography}
