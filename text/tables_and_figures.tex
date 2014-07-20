@@ -53,14 +53,15 @@ status at the end of follow-up.}
 %% HR table
 \begin{table}
 \caption{Hazard ratios (HR) [95\% confidence intervals (CI)] for risk of all 
-cause and cause specific mortality by categories of circulating vitamin D$_3$ 
+cause and cause specific mortality by season-adjusted categories of 25(OH)D$_3$ 
 concentration.}
 \begin{tabular}{lrrrrrrrr}
 \toprule
 & & &\multicolumn{3}{c}{minimally adjusted$^\dag$} & 
 \multicolumn{3}{c}{adjusted$^\ddag$} \\
  \cmidrule(r){4-6} \cmidrule(l){7-9} 
-& D$_3$ group & $N_{\text{deaths}}$ & HR & [95\% CI] & $p$ & HR & [95\% CI] & 
+& D$_3$ category & $N_{\text{deaths}}$ & HR & [95\% CI] & $p$ & HR & [95\% CI] 
+& 
 $p$ \\
 \midrule
 \input{../analysis/output/o03_hr_table.tex}
@@ -73,7 +74,7 @@ sex \newline
 $^\ddag$Additionally adjusted for BMI (kg/m$^2$), smoking status, cigarettes 
 per day, alcohol drinking status, and alcohol intake per day (mL) \newline
 $^*p$-values for the all-cause models are from tests against the null 
-hypothesis that the vitamin D$_3$ coefficients are identically 0. 
+hypothesis that the 25(OH)D$_3$ coefficients are identically 0. 
 \newline
 $^{\S}p$-values for the competing risks model are from tests against the null 
 hypothesis of no heterogeneity of the coefficients by cause of death (RCC 
@@ -82,16 +83,40 @@ versus non-RCC).
 \end{table}
 \clearpage
 
+%% continuously varying HR
+\begin{figure}
+ \centering
+\caption{Hazard ratio for all cause mortality among RCC cases as a function of 
+circulating concentration of 25(OH)D$_3$ at diagnosis, relative to a 
+concentration of 50~nmol/L. 25(OH)D$_3$ was modeled using restricted cubic 
+splines with knots at the 10th, 33rd, 67th, and 90th percentiles of its 
+distribution. Estimates were derived from a Cox model stratified by country of 
+recruitment, and adjusted for stage, age at recruitment, sex, and seasonality 
+(sine and cosine functions of day of blood draw). Solid and 
+dashed lines represent the maximum pseudolikelihood estimates and 95\% 
+confidence intervals respectively. The translucent lines are 1000 draws from 
+the multivariate normal distribution defined by the maximum pseudolikelihood 
+estimates and their variance covariance matrix, and thus give an indication of 
+the posterior density for the hazard ratio under a uniform prior on the 
+regression coefficients. The ``rug plot'' shows the observed distribution of 
+25(OH)D$_3$.}
+\includegraphics[width=12cm]{../analysis/output/g04_hr.pdf}
+\end{figure}
+
 %% Interactions with various factors
 \begin{figure}
  \centering
 \caption{Hazard ratios (HR) and 95\% confidence intervals (CI) for a 
-doubling in vitamin D$_3$ concentration by potential effect modifiers. 
-\footnotesize{Estimates derived from Cox models stratified by country of 
-recruitment, and adjusted for stage, age at recruitment, and sex. $p$-values 
+doubling in season-adjusted 25(OH)D$_3$ concentration by potential effect 
+modifiers. \footnotesize{Estimates derived from Cox models stratified by country 
+of recruitment, and adjusted for stage, age at recruitment, and sex. $p$-values 
 are from Wald tests of the interaction terms.}}
 \includegraphics[width=14cm]{../analysis/output/g09_interactions.pdf}
 \end{figure}
+
+%% Short report, so don't worry about the rest of the tables and figures
+\end{document}
+
 
 
 %% Model based survival by d3 and stage
@@ -118,7 +143,7 @@ death, by categories of circulating vitamin D$_3$ concentration.}
 & & &\multicolumn{3}{c}{minimally adjusted$^\dag$} & 
 \multicolumn{3}{c}{adjusted$^\ddag$} \\
  \cmidrule(r){4-6} \cmidrule(l){7-9} 
-& D$_3$ group & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ & HR & [95\% 
+& D$_3$ category & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ & HR & [95\% 
 CI] 
 & 
 $p$ \\
@@ -154,7 +179,7 @@ concentration, additionally adjusting for grade (participants with missing
 grade excluded).}
 \begin{tabular}{lrrrrrrrr}
 \toprule
-& D$_3$ group & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ \\
+& D$_3$ category & $N_{\text{events}}^{\P}$ & HR & [95\% CI] & $p$ \\
 \midrule
 \input{../analysis/output/o10_hr_grade_adj.tex}
 \bottomrule

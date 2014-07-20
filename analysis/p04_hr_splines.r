@@ -47,6 +47,7 @@ knts <- knts2
 ## Survival Models
 
 ## variables to adjust for
+#minlist <- c("age.recruitment", "sex", "sin1.recr.day", "cos1.recr.day") 
 minlist <- c("age.recruitment", "sex", "stage.imputed", "sin1.recr.day", "cos1.recr.day") 
 fullformula <- paste(minlist, collapse = " + ")
 fullformula <- paste(fullformula, "+ strata(country)")
@@ -57,15 +58,13 @@ xstr <- "ns(vd3.h, knots=knts, Boundary.knots=bknts)"
 
 
 coxnull <- coxph(as.formula(paste(lhsstr, xstr)),
-                 weights=wgt.stratified, data = analysis)
+                 weights=wgt.stratified, robust=TRUE, data = analysis)
 coxfull <- coxph(as.formula(paste(lhsstr, xstr, "+", fullformula)),
-                 weights=wgt.stratified, data = analysis,
+                 weights=wgt.stratified, robust=TRUE, data = analysis,
                  model = TRUE)
 coxref <- coxph(as.formula(paste(lhsstr, fullformula)),
-                 weights=wgt.stratified, data = analysis,
+                 weights=wgt.stratified, robust=TRUE, data = analysis,
                  model = TRUE)
-test_vitd <- anova(coxfull, coxref)
-print(test_vitd)
 
 ## generate matrix for prediction
 vitd <- seq(5,100,by=1)
@@ -143,17 +142,20 @@ p <- p + scale_x_continuous(expression(paste("25(OH)D" [3], ", nmol/L")),
                             limits = c(4, 100))
 p <- p + theme(legend.position="none",
                text=element_text(size=16),
-               axis.text=element_text(size=16),
+               axis.text=element_text(size=14),
                axis.title.x=element_text(vjust=-.5),
                axis.title.y=element_text(vjust=0.3),
-               panel.grid.major = element_blank(),
-               panel.grid.minor = element_blank(),
-               panel.border = element_blank(),
-               axis.line = element_line(color = 'black'))
+               #panel.grid.major = element_blank(),
+               panel.grid.minor = element_blank())
 
+CairoFonts(regular    = "Palatino:style=Regular", 
+           bold       = "Palatino:style=Bold", 
+           italic     = "Palatino:style=Italic",
+           bolditalic = "Palatino:style=Bold Italic,BoldItalic",
+           symbol     = "Symbol")
 CairoPDF(file = "./analysis/output/g04_hr.pdf",
-         width = 8, 
-         height = 6)
+         width = 7, 
+         height = 5)
 print(p)
 dev.off()
 #system("pdf2ps ./analysis/output/g12_hr.pdf ./analysis/output/g12_hr.ps")

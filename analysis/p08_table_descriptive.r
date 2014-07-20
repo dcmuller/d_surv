@@ -32,7 +32,7 @@ tabdat <- with(analysis,
                                                        max(bmi_current, na.rm=TRUE)),
                                               right=FALSE,
                                               include.lowest=TRUE),
-                          "Circulating vitamin D (nmol/L)"=d3_q4,
+                          "Season-adjusted circulating 25(OH)D$_3$ category"=factor(d3_q4, labels=c("1 (lowest)", "2", "3", "4 (highest)")), 
                           "Vital status"=factor(vitalstatus, labels=c("alive", "dead")),
                           "Total"="Total",
                           check.names=FALSE))
@@ -46,7 +46,7 @@ t1 <- tabular(Total + Literal("\\\\ %") + Sex + Literal("\\\\  %") +
                 Smoking + Literal("\\\\ %") + Diabetic + Literal("\\\\ %") + 
                 Hypertension + Literal("\\\\ %") + Stage + Literal("\\\\ %") +
                 Grade + Literal("\\\\ %") + Histology + Literal("\\\\ %") + 
-                `Circulating vitamin D (nmol/L)` 
+                `Season-adjusted circulating 25(OH)D$_3$ category`
               ~ (`Vital status`*((n=1) + 
                                   Paste(Percent("col"), 
                                         digits=0, prefix="(", postfix=")", 

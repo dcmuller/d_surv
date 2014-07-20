@@ -150,29 +150,29 @@ analysis/output/?10* : ./analysis/p10*
 	cd text && latexmk -pdf tables_and_figures.tex
 	cd text && latexmk -c tables_and_figures.tex
 
-#./text/rccsurv_vitd.tex: $(output)
-#	touch $@
-#	cd text && latexmk -pdf rccsurv_vitb.tex
-#	cd text && latexmk -c rccsurv_vitb.tex
+./text/vitd_rcc_surv.tex: $(output)
+	touch $@
+	cd text && latexmk -pdf vitd_rcc_surv.tex
+	cd text && latexmk -c vitd_rcc_surv.tex
 
 # pdf files in text depend on their tex file, and possibly a bib database
 ./text/tables_and_figures.pdf : ./text/tables_and_figures.tex
 	cd text && latexmk -pdf tables_and_figures.tex
 	cd text && latexmk -c tables_and_figures.tex
 
-#./text/rccsurv_vitd.pdf : 	./text/rccsurv_vitb.tex \
-#       				./text/bibtex/*.bib
-#	cd text && latexmk -pdf rccsurv_vitb.tex
-#	cd text && latexmk -c rccsurv_vitb.tex
-#
-#./text/rccsurv_vitd.rtf : ./text/rccsurv_vitb.tex \
-#  			  ./text/bibtex/*.bib
-#	cd text && pdflatex 	rccsurv_vitb.tex
-#	cd text && bibtex    	rccsurv_vitb.aux
-#	cd text && pdflatex 	rccsurv_vitb.tex
-#	cd text && pdflatex 	rccsurv_vitb.tex
-#	cd text && pdflatex 	rccsurv_vitb.tex
-#	cd text && latex2rtf 	rccsurv_vitb.tex
-#	cd text && latexmk -pdf rccsurv_vitb.tex
-#	cd text && latexmk -c 	rccsurv_vitb.tex
+./text/vitd_rcc_surv.pdf : 	./text/vitd_rcc_surv.tex \
+	       			./text/bibtex/*.bib
+	cd text && latexmk -pdf vitd_rcc_surv.tex
+	cd text && latexmk -c vitd_rcc_surv.tex
+
+./text/vitd_rcc_surv.rtf : ./text/vitd_rcc_surv.tex \
+  			  ./text/bibtex/*.bib
+	cd text && pdflatex 	vitd_rcc_surv.tex
+	cd text && bibtex    	vitd_rcc_surv.aux
+	cd text && pdflatex 	vitd_rcc_surv.tex
+	cd text && pdflatex 	vitd_rcc_surv.tex
+	cd text && pdflatex 	vitd_rcc_surv.tex
+	cd text && latex2rtf 	vitd_rcc_surv.tex
+	cd text && latexmk -pdf vitd_rcc_surv.tex
+	cd text && latexmk -c 	vitd_rcc_surv.tex
 
