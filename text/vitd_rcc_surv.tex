@@ -237,9 +237,9 @@ concentration of 50 nmol/L) is presented in Figure~1. These estimates
 corroborate those in Table~2, suggesting a monotonic inverse association between 
 25(OH)D$_3$ and hazard of death.
 
-Figure~2 presents HRs for a doubling in seasonally adjusted 25(OH)D$_3$ 
-concentration separately by categories of several potential effect modifiers. 
-The estimated magnitude of the association was consistent by, sex, stage, 
+Supplementary Figure~1 presents HRs for a doubling in seasonally adjusted 
+25(OH)D$_3$ concentration separately by categories of several potential effect 
+modifiers. The estimated magnitude of the association was consistent by, sex, stage, 
 histology, history of diabetes, smoking status, and alcohol intake status. 
 There was some indication that the association might be stronger among those 
 diagnosed at age 65 years or older, those with a history of hypertension, those 
@@ -308,24 +308,75 @@ Research on Cancer, supported by the Cancer Council Australia.
 \clearpage
 \bibliographystyle{./bibtex/bjc}
 \bibliography{./bibtex/library_vitd}
-\end{document}
 
 
 \clearpage
 \section*{Tables}
 
-%% Table 1: Descriptive table
-\input{../analysis/output/o10_table_descriptive.tex}
-\clearpage
+%% descriptive table
+\begin{table}
+\small
+\caption{Table 1: Demographic and clinical characteristics of the participants by 
+vital status at the end of follow-up.}
+\centering
+\input{../analysis/output/o08_descriptive_by_vitstat.tex}
+\end{table}
 
-%% Table 2: table of estimates from relative risk models
-\input{../analysis/output/o11_table_riskmodels.tex}
+\clearpage 
+%% HR table
+\begin{table}
+\caption{Table 2: Hazard ratios (HR) [95\% confidence intervals (CI)] for risk of 
+all cause and cause specific mortality by season-adjusted categories of 25(OH)D$_3$ 
+concentration.}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+& & &\multicolumn{3}{c}{minimally adjusted$^\dag$} & 
+\multicolumn{3}{c}{adjusted$^\ddag$} \\
+ \cmidrule(r){4-6} \cmidrule(l){7-9} 
+& D$_3$ category & $N_{\text{deaths}}$ & HR & [95\% CI] & $p$ & HR & [95\% CI] 
+& 
+$p$ \\
+\midrule
+\input{../analysis/output/o03_hr_table.tex}
+\bottomrule
+\end{tabular}
+\newline
+{\footnotesize 
+$^\dag$Stratified by country, and adjusted for stage, age at recruitment, and 
+sex \newline
+$^\ddag$Additionally adjusted for BMI (kg/m$^2$), smoking status, cigarettes 
+per day, alcohol drinking status, and alcohol intake per day (mL) \newline
+$^*p$-values for the all-cause models are from tests against the null 
+hypothesis that the 25(OH)D$_3$ coefficients are identically 0. 
+\newline
+$^{\S}p$-values for the competing risks model are from tests against the null 
+hypothesis of no heterogeneity of the coefficients by cause of death (RCC 
+versus non-RCC).
+}
+\end{table}
 \clearpage
-
-%% Appendix Table 1: Distribution of vit d by Country
-\input{../analysis/output/o10_table_d3_dist.tex}
-\clearpage
-
 
 \section*{Figure legends}
+%% continuously varying HR
+\noindent \textbf{Figure 1}: Hazard ratio for all cause mortality among RCC cases as 
+a function of circulating concentration of 25(OH)D$_3$ at diagnosis, relative to a 
+concentration of 50~nmol/L. 25(OH)D$_3$ was modeled using restricted cubic splines 
+with knots at the 10th, 33rd, 67th, and 90th percentiles of its distribution. 
+Estimates were derived from a Cox model stratified by country of recruitment, and 
+adjusted for stage, age at recruitment, sex, and seasonality (sine and cosine 
+functions of day of blood draw). Solid and dashed lines represent the maximum 
+pseudolikelihood estimates and 95\% confidence intervals respectively. The 
+translucent lines are 1000 draws from the multivariate normal distribution defined 
+by the maximum pseudolikelihood estimates and their variance covariance matrix, and 
+thus give an indication of the posterior density for the hazard ratio under a 
+uniform prior on the regression coefficients. The ``rug plot'' shows the observed 
+distribution of 25(OH)D$_3$.
+
+
+\noindent \textbf{Supplementary Figure 1}: Hazard ratios (HR) and 95\% confidence 
+intervals (CI) for a doubling in season-adjusted 25(OH)D$_3$ concentration by 
+potential effect modifiers. \footnotesize{Estimates derived from Cox models 
+stratified by country of recruitment, and adjusted for stage, age at recruitment, 
+and sex. $p$-values are from Wald tests of the interaction terms.} 
+
 \end{document}
