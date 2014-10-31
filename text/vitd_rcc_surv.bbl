@@ -1,122 +1,134 @@
-\begin{thebibliography}{10}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\providecommand{\eprint}[2][]{\url{#2}}
+\begin{thebibliography}{18}
+\providecommand{\natexlab}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
 
-\bibitem{ferlay_cancer_2013}
-Ferlay J, Steliarova-Foucher E, Lortet-Tieulent J, et~al.
-\newblock Cancer incidence and mortality patterns in Europe: Estimates for 40
-  countries in 2012.
-\newblock \emph{European Journal of Cancer} .
-  2013;\hspace{0pt}49(6):1374--1403.
-\newblock
-  \urlprefix\url{http://www.ejcancer.com/article/S0959804913000075/abstract}.
+\bibitem[{Barlow(1994)}]{barlow_robust_1994}
+Barlow WE (1994) Robust variance estimation for the case-cohort design.
+\newblock \textit{Biometrics} \textbf{50}:1064--1072
 
-\bibitem{CRUK_kidney_2014}
-Statistics and outlook for kidney cancer. 2014.
-\newblock
-  \urlprefix\url{http://www.cancerresearchuk.org/cancer-help/type/kidney-cancer/treatment/statistics-and-outlook-for-kidney-cancer#stage}.
-\newblock Accessed: 28 May 2014.
+\bibitem[{Barlow \textit{et~al.}(1999)Barlow, Ichikawa, Rosner, and
+  Izumi}]{barlow_analysis_1999}
+Barlow WE, Ichikawa L, Rosner D, Izumi S (1999) Analysis of Case-Cohort
+  Designs.
+\newblock \textit{Journal of Clinical Epidemiology} \textbf{52}:1165--1172.
+\newblock \doi{10.1016/S0895-4356(99)00102-X}
 
-\bibitem{muller_circulating_2014}
-Muller DC, Fanidi A, Midttun {\O}, et~al.
-\newblock Circulating 25-Hydroxyvitamin D3 in Relation to Renal Cell Carcinoma
-  Incidence and Survival in the {EPIC} Cohort.
-\newblock \emph{American Journal of Epidemiology} . 2014;\hspace{0pt}kwu204.
+\bibitem[{{Cancer Research UK}(2014)}]{CRUK_kidney_2014}
+{Cancer Research UK} (2014) Statistics and outlook for kidney cancer.
+\newblock Accessed: 28 May 2014
 
-\bibitem{joh_predicted_2013}
-Joh HK, Giovannucci EL, Bertrand KA, et~al.
-\newblock Predicted Plasma 25-Hydroxyvitamin D and Risk of Renal Cell Cancer.
-\newblock \emph{Journal of the National Cancer Institute} .
-  2013;\hspace{0pt}105(10):726--732.
+\bibitem[{Ferlay \textit{et~al.}(2013)Ferlay, Steliarova-Foucher,
+  Lortet-Tieulent, Rosso, Coebergh, Comber, Forman, and
+  Bray}]{ferlay_cancer_2013}
+Ferlay J, Steliarova-Foucher E, Lortet-Tieulent J, Rosso S, Coebergh JWW,
+  Comber H, Forman D, Bray F (2013) Cancer incidence and mortality patterns in
+  Europe: Estimates for 40 countries in 2012.
+\newblock \textit{European Journal of Cancer} \textbf{49}:1374--1403.
+\newblock \doi{10.1016/j.ejca.2012.12.027}
 
-\bibitem{midttun_determination_2011}
-Midttun {\O}, Ueland PM.
-\newblock Determination of vitamins A, D and E in a small volume of human
-  plasma by a high-throughput method based on liquid chromatography/tandem mass
-  spectrometry.
-\newblock \emph{Rapid Communications in Mass Spectrometry} .
-  2011;\hspace{0pt}25(14):1942–1948.
+\bibitem[{Hutchinson \textit{et~al.}(2010)Hutchinson, Grimnes, Joakimsen,
+  Figenschau, and Jorde}]{hutchinson_low_2010}
+Hutchinson MS, Grimnes G, Joakimsen RM, Figenschau Y, Jorde R (2010) Low serum
+  25-hydroxyvitamin D levels are associated with increased all-cause mortality
+  risk in a general population: the Troms\o study.
+\newblock \textit{European Journal of Endocrinology} \textbf{162}:935--942
 
-\bibitem{lunn_applying_1995}
-Lunn M, {McNeil} D.
-\newblock Applying Cox Regression to Competing Risks.
-\newblock \emph{Biometrics} . 1995;\hspace{0pt}51(2):524.
+\bibitem[{Jia \textit{et~al.}(2007)Jia, Aucott, and
+  {McNeill}}]{jia_nutritional_2007}
+Jia X, Aucott LS, {McNeill} G (2007) Nutritional status and subsequent
+  all-cause mortality in men and women aged 75 years or over living in the
+  community.
+\newblock \textit{British Journal of Nutrition} \textbf{98}:593--599
 
-\bibitem{prentice_case-cohort_1986}
-Prentice RL.
-\newblock A case-cohort design for epidemiologic cohort studies and disease
-  prevention trials.
-\newblock \emph{Biometrika} . 1986;\hspace{0pt}73(1):1--11.
+\bibitem[{Joh \textit{et~al.}(2013)Joh, Giovannucci, Bertrand, Lim, and
+  Cho}]{joh_predicted_2013}
+Joh HK, Giovannucci EL, Bertrand KA, Lim S, Cho E (2013) Predicted Plasma
+  25-Hydroxyvitamin D and Risk of Renal Cell Cancer.
+\newblock \textit{Journal of the National Cancer Institute}
+  \textbf{105}:726--732
 
-\bibitem{barlow_robust_1994}
-Barlow WE.
-\newblock Robust variance estimation for the case-cohort design.
-\newblock \emph{Biometrics} . 1994;\hspace{0pt}50(4):1064--1072.
+\bibitem[{Lunn and {McNeil}(1995)}]{lunn_applying_1995}
+Lunn M, {McNeil} D (1995) Applying Cox Regression to Competing Risks.
+\newblock \textit{Biometrics} \textbf{51}:524.
+\newblock \doi{10.2307/2532940}
 
-\bibitem{barlow_analysis_1999}
-Barlow WE, Ichikawa L, Rosner D, et~al.
-\newblock Analysis of Case-Cohort Designs.
-\newblock \emph{Journal of Clinical Epidemiology} .
-  1999;\hspace{0pt}52(12):1165--1172.
+\bibitem[{{Melamed {ML}} \textit{et~al.}(2008){Melamed {ML}}, {Michos {ED}},
+  {Post W}, and {Astor B}}]{melamed_ml_25-hydroxyvitamin_2008}
+{Melamed {ML}}, {Michos {ED}}, {Post W}, {Astor B} (2008) 25-hydroxyvitamin d
+  levels and the risk of mortality in the general population.
+\newblock \textit{Archives of Internal Medicine} \textbf{168}:1629--1637
 
-\bibitem{r_2014}
-{R Core Team}.
-\newblock \emph{R: A Language and Environment for Statistical Computing}.
-\newblock Vienna, Austria. 2014.
+\bibitem[{Midttun and Ueland(2011)}]{midttun_determination_2011}
+Midttun {\O}, Ueland PM (2011) Determination of vitamins A, D and E in a small
+  volume of human plasma by a high-throughput method based on liquid
+  chromatography/tandem mass spectrometry.
+\newblock \textit{Rapid Communications in Mass Spectrometry}
+  \textbf{25}:1942–1948
 
-\bibitem{schottker_strong_2013}
-Sch\"ottker B, Haug U, Schomburg L, et~al.
-\newblock Strong associations of 25-hydroxyvitamin D concentrations with
-  all-cause, cardiovascular, cancer, and respiratory disease mortality in a
-  large cohort study.
-\newblock \emph{The American Journal of Clinical Nutrition} .
-  2013;\hspace{0pt}97(4):782--793.
+\bibitem[{Muller \textit{et~al.}(2014)Muller, Fanidi, Midttun, Steffen, Dossus,
+  Boutron-Ruault, Severi, K\"uhn, Katzke, Torre, Gonz\'alez, S\'anchez,
+  Dorronsoro, Santiuste, Barricarte, Khaw, Wareham, Travis, Trichopoulou,
+  Giotaki, Trichopoulos, Palli, Krogh, Tumino, Vineis, Panico, Tj{\o}nneland,
+  Olsen, Bueno-de Mesquita, Peeters, Ljungberg, Wennberg, Weiderpass, Murphy,
+  Riboli, Ueland, Boeing, Brennan, and Johansson}]{muller_circulating_2014}
+Muller DC, Fanidi A, Midttun {\O}, Steffen A, Dossus L, Boutron-Ruault MC,
+  Severi G, K\"uhn T, Katzke V, Torre RAdl, Gonz\'alez CA, S\'anchez MJ,
+  Dorronsoro M, Santiuste C, Barricarte A, Khaw KT, Wareham N, Travis RC,
+  Trichopoulou A, Giotaki M, Trichopoulos D, Palli D, Krogh V, Tumino R, Vineis
+  P, Panico S, Tj{\o}nneland A, Olsen A, Bueno-de Mesquita HB, Peeters PH,
+  Ljungberg B, Wennberg M, Weiderpass E, Murphy N, Riboli E, Ueland PM, Boeing
+  H, Brennan P, Johansson M (2014) Circulating 25-Hydroxyvitamin D3 in Relation
+  to Renal Cell Carcinoma Incidence and Survival in the {EPIC} Cohort.
+\newblock \textit{American Journal of Epidemiology} kwu204.
+\newblock \doi{10.1093/aje/kwu204}
 
-\bibitem{virtanen_association_2011}
-Virtanen JK, Nurmi T, Voutilainen S, et~al.
-\newblock Association of serum 25-hydroxyvitamin D with the risk of death in a
-  general older population in Finland.
-\newblock \emph{European Journal of Nutrition} .
-  2011;\hspace{0pt}50(5):305--312.
+\bibitem[{Pilz \textit{et~al.}(2009)Pilz, Dobnig, Nijpels, Heine, Stehouwer,
+  Snijder, Van~Dam, and Dekker}]{pilz_vitamin_2009}
+Pilz S, Dobnig H, Nijpels G, Heine RJ, Stehouwer CDA, Snijder MB, Van~Dam RM,
+  Dekker JM (2009) Vitamin D and mortality in older men and women.
+\newblock \textit{Clinical Endocrinology} \textbf{71}:666--672
 
-\bibitem{hutchinson_low_2010}
-Hutchinson MS, Grimnes G, Joakimsen RM, et~al.
-\newblock Low serum 25-hydroxyvitamin D levels are associated with increased
-  all-cause mortality risk in a general population: the Troms\o study.
-\newblock \emph{European Journal of Endocrinology} .
-  2010;\hspace{0pt}162(5):935--942.
+\bibitem[{Prentice(1986)}]{prentice_case-cohort_1986}
+Prentice RL (1986) A case-cohort design for epidemiologic cohort studies and
+  disease prevention trials.
+\newblock \textit{Biometrika} \textbf{73}:1--11.
+\newblock \doi{10.1093/biomet/73.1.1}
 
-\bibitem{szulc_serum_2009}
-Szulc P, Claustrat B, Delmas PD.
-\newblock Serum concentrations of $17\beta$-E$_2$ and 25-hydroxycholecalciferol
-  ({25OHD)} in relation to all-cause mortality in older men -- the {MINOS}
-  study.
-\newblock \emph{Clinical Endocrinology} . 2009;\hspace{0pt}71(4):594--602.
+\bibitem[{{R Core Team}(2014)}]{r_2014}
+{R Core Team} (2014) R: A Language and Environment for Statistical Computing.
+\newblock Vienna, Austria
 
-\bibitem{semba_low_2009}
-Semba RD, Houston DK, Ferrucci L, et~al.
-\newblock Low serum 25-hydroxyvitamin D concentrations are associated with
+\bibitem[{Sch\"ottker \textit{et~al.}(2013)Sch\"ottker, Haug, Schomburg,
+  K\"ohrle, Perna, M\"uller, Holleczek, and Brenner}]{schottker_strong_2013}
+Sch\"ottker B, Haug U, Schomburg L, K\"ohrle J, Perna L, M\"uller H, Holleczek
+  B, Brenner H (2013) Strong associations of 25-hydroxyvitamin D concentrations
+  with all-cause, cardiovascular, cancer, and respiratory disease mortality in
+  a large cohort study.
+\newblock \textit{The American Journal of Clinical Nutrition}
+  \textbf{97}:782--793
+
+\bibitem[{Semba \textit{et~al.}(2009)Semba, Houston, Ferrucci, Cappola, Sun,
+  Guralnik, and Fried}]{semba_low_2009}
+Semba RD, Houston DK, Ferrucci L, Cappola AR, Sun K, Guralnik JM, Fried LP
+  (2009) Low serum 25-hydroxyvitamin D concentrations are associated with
   greater all-cause mortality in older community-dwelling women.
-\newblock \emph{Nutrition Research} . 2009;\hspace{0pt}29(8):525--530.
+\newblock \textit{Nutrition Research} \textbf{29}:525--530
 
-\bibitem{pilz_vitamin_2009}
-Pilz S, Dobnig H, Nijpels G, et~al.
-\newblock Vitamin D and mortality in older men and women.
-\newblock \emph{Clinical Endocrinology} . 2009;\hspace{0pt}71(5):666--672.
+\bibitem[{Szulc \textit{et~al.}(2009)Szulc, Claustrat, and
+  Delmas}]{szulc_serum_2009}
+Szulc P, Claustrat B, Delmas PD (2009) Serum concentrations of $17\beta$-E$_2$
+  and 25-hydroxycholecalciferol ({25OHD)} in relation to all-cause mortality in
+  older men -- the {MINOS} study.
+\newblock \textit{Clinical Endocrinology} \textbf{71}:594--602
 
-\bibitem{melamed_ml_25-hydroxyvitamin_2008}
-{Melamed {ML}}, {Michos {ED}}, {Post W}, et~al.
-\newblock 25-hydroxyvitamin d levels and the risk of mortality in the general
-  population.
-\newblock \emph{Archives of Internal Medicine} .
-  2008;\hspace{0pt}168(15):1629--1637.
-
-\bibitem{jia_nutritional_2007}
-Jia X, Aucott LS, {McNeill} G.
-\newblock Nutritional status and subsequent all-cause mortality in men and
-  women aged 75 years or over living in the community.
-\newblock \emph{British Journal of Nutrition} .
-  2007;\hspace{0pt}98(03):593--599.
+\bibitem[{Virtanen \textit{et~al.}(2011)Virtanen, Nurmi, Voutilainen, Mursu,
+  and Tuomainen}]{virtanen_association_2011}
+Virtanen JK, Nurmi T, Voutilainen S, Mursu J, Tuomainen TP (2011) Association
+  of serum 25-hydroxyvitamin D with the risk of death in a general older
+  population in Finland.
+\newblock \textit{European Journal of Nutrition} \textbf{50}:305--312
 
 \end{thebibliography}

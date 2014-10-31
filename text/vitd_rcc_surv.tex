@@ -3,9 +3,11 @@
 
 \documentclass[a4paper,11pt]{article}
 %\usepackage[numbers,comma,square,sort&compress]{natbib}
-\usepackage{cite}
-\renewcommand{\citeleft}{(}
-\renewcommand{\citeright}{)}
+\usepackage{natbib}
+\renewcommand{\cite}{\citep}
+%\usepackage{cite}
+%\renewcommand{\citeleft}{(}
+%\renewcommand{\citeright}{)}
 \usepackage{setspace}
 
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
@@ -38,7 +40,6 @@
 \parskip 10pt
 \parindent 25pt
 
-%\renewcommand{\cite}{\citep}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% #1 end preamble. Begin document proper
@@ -305,7 +306,7 @@ Research on Cancer, supported by the Cancer Council Australia.
 %% #5 references
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\bibliographystyle{./bibtex/aje}
+\bibliographystyle{./bibtex/bjc}
 \bibliography{./bibtex/library_vitd}
 \end{document}
 
