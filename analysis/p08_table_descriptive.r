@@ -13,10 +13,10 @@ tabdat <- with(analysis,
                           Country=factor(country, labels=c("Czech Republic", 
                                                            "Russia", 
                                                            "Romania")), 
-                          Diabetic=factor(diabete, labels=c("Yes", "No")),
+                          Diabetes=factor(diabete, labels=c("Yes", "No")),
                           Hypertension=factor(hypertension, labels=c("Yes", "No")),
                           Stage=factor(stage_imputed, labels=c("I", "II", "III", "IV")),
-                          Grade=factor(grade, labels=c("I", "II", "III", "IV")),
+                          Grade=factor(grade),
                           Histology=histo_grp,
                           Smoking=factor(smoke_status,
                                               labels=c("Never smoker",
@@ -43,7 +43,7 @@ tabdat <- droplevels(tabdat)
 t1 <- tabular(Total + Literal("\\\\ %") + Sex + Literal("\\\\  %") +  
                 `Age at recruitment (years)` + Literal("\\\\ %") + 
                 Country + Literal("\\\\ %") + `BMI (kg/m$^2$)` + Literal("\\\\ %") +
-                Smoking + Literal("\\\\ %") + Diabetic + Literal("\\\\ %") + 
+                Smoking + Literal("\\\\ %") + Diabetes + Literal("\\\\ %") + 
                 Hypertension + Literal("\\\\ %") + Stage + Literal("\\\\ %") +
                 Grade + Literal("\\\\ %") + Histology + Literal("\\\\ %") + 
                 `Season-adjusted circulating 25(OH)D$_3$ category`

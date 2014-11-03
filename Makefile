@@ -155,6 +155,11 @@ analysis/output/?10* : ./analysis/p10*
 	cd text && latexmk -pdf vitd_rcc_surv.tex
 	cd text && latexmk -c vitd_rcc_surv.tex
 
+text/copy_figures.sh : $(output)
+	touch $@
+	./text/copy_figures.sh
+
+
 # pdf files in text depend on their tex file, and possibly a bib database
 ./text/tables_and_figures.pdf : ./text/tables_and_figures.tex
 	cd text && latexmk -pdf tables_and_figures.tex
