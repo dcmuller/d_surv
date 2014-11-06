@@ -62,3 +62,14 @@ latex(tabular(Factor(Smoking) + Literal("\\newline %") + Factor(Sex) ~ Factor(`V
                                                                        digits=0, prefix="(", postfix=")", 
                                                                        head="(\\%)", justify="r")), 
               data=tabdat, suppressLabels=0))
+
+## output summary of measured vitamin D values
+su_vitd <- summary(analysis$vd3_h)
+pctiles_vitd <- quantile(analysis$vd3_h, 
+                probs = c(0.05, 0.25, 0.5, 0.75, 0.95),
+                na.rm = TRUE)
+sink("./analysis/output/l08_vitd_summary.txt")
+su_vitd
+pctiles_vitd
+sink()
+
