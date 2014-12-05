@@ -158,6 +158,11 @@ CairoPDF(file = "./analysis/output/g04_hr.pdf",
          height = 5)
 print(p)
 dev.off()
+CairoTIFF(file = "./analysis/output/g04_hr.tiff", res = 300, 
+          width = 5*300, 
+          height = 4*300)
+print(p)
+dev.off()
 #system("pdf2ps ./analysis/output/g12_hr.pdf ./analysis/output/g12_hr.ps")
 #system("epstopdf ./analysis/output/g12_hr.ps")
 
