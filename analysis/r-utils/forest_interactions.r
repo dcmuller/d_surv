@@ -74,9 +74,11 @@ main_plot <- function(data,
     scale_x_log10(name = xname, breaks = xbreaks, limits = xlim) +
     scale_y_discrete(name = "") +
     theme_bw() +
+    ggtitle("Supplementary Figure 1") + 
     theme(axis.text.y = element_blank(),
           axis.ticks.y = element_blank(),
           axis.title.y = element_blank(),
+          plot.title = element_text(size=12, hjust = 1, vjust=1),
           panel.grid.minor.y=element_blank(), 
           panel.grid.major.y=element_blank(), 
           panel.grid.minor.x=element_blank(), 
@@ -104,8 +106,10 @@ table_plot <- function(long_data) {
     scale_y_discrete(name = "", labels = " ") +
     scale_x_discrete(name = "", labels = " ") +
     theme_bw() +
+    ggtitle(" ") + 
     theme(axis.text = element_text(colour = "white", size=12),
           axis.title.x = element_text(colour = "white", size=14),
+          plot.title = element_text(colour="white", size=12, hjust = 1, vjust=0),
           axis.ticks = element_blank(),
           panel.grid.minor = element_blank(),
           panel.grid.major = element_blank(),

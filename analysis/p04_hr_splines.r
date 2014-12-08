@@ -140,7 +140,9 @@ p <- p + scale_y_log10("\n \n Hazard Ratio",
                        limits = c(.25, 4))
 p <- p + scale_x_continuous(expression(paste("25(OH)D" [3], ", nmol/L")),
                             limits = c(4, 100))
+p <- p + ggtitle("Figure 1")
 p <- p + theme(legend.position="none",
+               plot.title = element_text(hjust = 1),
                text=element_text(size=16),
                axis.text=element_text(size=14),
                axis.title.x=element_text(vjust=-.5),
