@@ -1,0 +1,50 @@
+%% vitamin D$_3$ and survival from Kidney cancer (K2 study)
+%% tables and figures
+
+\documentclass[a4paper,10pt]{article}
+%\usepackage[numbers,comma,square,sort&compress]{natbib}
+\usepackage{cite}
+\renewcommand{\citeleft}{(}
+\renewcommand{\citeright}{)}
+\usepackage{setspace}
+
+\usepackage{caption}
+
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage{threeparttable}
+\usepackage{color, soul}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  citecolor=black,
+  linkcolor=black,
+}
+
+%% use palatino font
+\usepackage{mathpazo}
+\linespread{1.15}
+
+%% indenting and paragraphing
+\parskip 10pt
+\parindent 25pt
+
+%\renewcommand{\cite}{\citep}
+
+\begin{document}
+
+\begin{table}
+\caption*{Supplementary Table 1: Demographic and clinical characteristics of the 
+participants for those included and not included in the case-cohort sample}
+\centering
+\input{../analysis/output/o11_descriptive_by_insample.tex}
+\end{table}
+\end{document}

@@ -84,8 +84,8 @@ main_plot <- function(data,
           panel.grid.minor.x=element_blank(), 
           panel.grid.major.x=element_blank(), 
           plot.margin = unit(c(0.5,0,2,0), "lines"),
-          axis.text.x = element_text(size=14),
-          axis.title.x = element_text(size=16, vjust=-2)
+          axis.text.x = element_text(size=12),
+          axis.title.x = element_text(size=14, vjust=-2)
           )
   return(main_plot)
 }
@@ -101,7 +101,7 @@ table_plot <- function(long_data) {
                  )
                  
   plot <- plot +
-    geom_text(size = 4, hjust = 0, vjust = .5) +
+    geom_text(size = 3, hjust = 0, vjust = .5) +
     labs(x="", y="") +
     scale_y_discrete(name = "", labels = " ") +
     scale_x_discrete(name = "", labels = " ") +

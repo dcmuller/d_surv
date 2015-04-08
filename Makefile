@@ -73,7 +73,12 @@ analysis/p10_hr_grade_adj.do : ./data/d01_cacoh_stset_barlow.dta \
 	touch $@
 	stata-se -b $@
 
-
+analysis/p11_in_vs_out.r : 	./data/full_cohort_25mar2015.sas7bdat \
+				./data/k2survivaldata_23apr2014.dta
+	touch $@
+	R CMD BATCH --no-save --no-restore $@
+	
+	 
 # some data files are created by program files 
 data/d00* : ./analysis/p00*
 	stata-se -b $<
@@ -143,6 +148,10 @@ analysis/output/?09* : ./analysis/p09*
 analysis/output/?10* : ./analysis/p10*
 	stata-se -b $<
 
+analysis/output/?11* : ./analysis/p11*
+	R CMD BATCH --no-save --no-restore $<
+
+
 
 # Report and manuscript depend on output
 ./text/tables_and_figures.tex : $(output) 
@@ -155,6 +164,11 @@ analysis/output/?10* : ./analysis/p10*
 	cd text && latexmk -pdf vitd_rcc_surv.tex
 	cd text && latexmk -c vitd_rcc_surv.tex
 
+./text/supp_table1.tex : $(output) 
+	touch $@
+	cd text && latexmk -pdf supp_table1.tex
+	cd text && latexmk -c  supp_table1.tex
+
 text/copy_figures.sh : $(output)
 	touch $@
 	./text/copy_figures.sh
@@ -164,6 +178,10 @@ text/copy_figures.sh : $(output)
 ./text/tables_and_figures.pdf : ./text/tables_and_figures.tex
 	cd text && latexmk -pdf tables_and_figures.tex
 	cd text && latexmk -c tables_and_figures.tex
+
+./text/supp_table1.pdf : ./text/supp_table1.tex
+	cd text && latexmk -pdf supp_table1.tex
+	cd text && latexmk -c supp_table1.tex
 
 ./text/vitd_rcc_surv.pdf : 	./text/vitd_rcc_surv.tex \
 	       			./text/bibtex/*.bib

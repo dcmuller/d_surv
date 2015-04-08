@@ -3,7 +3,7 @@
 ################################################
 ## required packages
 req <- c("mvtnorm", "ggplot2", "reshape2", 
-         "foreign", "Hmisc", "scales", 
+         "foreign", "Hmisc", "scales", "splines", 
          "Cairo", "lubridate", "gridExtra", "gtable", "plyr", "lmtest",
          "survival", "data.table")
 lapply(req, library, character.only = TRUE)
@@ -143,8 +143,8 @@ p <- p + scale_x_continuous(expression(paste("25(OH)D" [3], ", nmol/L")),
 p <- p + ggtitle("Figure 1")
 p <- p + theme(legend.position="none",
                plot.title = element_text(hjust = 1),
-               text=element_text(size=16),
-               axis.text=element_text(size=14),
+               text=element_text(size=12),
+               axis.text=element_text(size=10),
                axis.title.x=element_text(vjust=-.5),
                axis.title.y=element_text(vjust=0.3),
                #panel.grid.major = element_blank(),
@@ -160,9 +160,9 @@ CairoPDF(file = "./analysis/output/g04_hr.pdf",
          height = 5)
 print(p)
 dev.off()
-CairoTIFF(file = "./analysis/output/g04_hr.tiff", res = 300, 
-          width = 5*300, 
-          height = 4*300)
+CairoTIFF(file = "./analysis/output/g04_hr.tiff", res=300,
+          width = 4.5*300, 
+          height = 3.6*300)
 print(p)
 dev.off()
 #system("pdf2ps ./analysis/output/g12_hr.pdf ./analysis/output/g12_hr.ps")

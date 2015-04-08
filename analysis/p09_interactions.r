@@ -200,17 +200,29 @@ CairoFonts(regular    = "Palatino:style=Regular",
            bolditalic = "Palatino:style=Bold Italic,BoldItalic",
            symbol     = "Symbol")
 CairoPDF(file="./analysis/output/g09_interactions.pdf", 
-         width=8.2, 
-         height=8.5, 
-         pointsize=5)
+         width=6.5, 
+         height=6.8, 
+         pointsize=4)
 plot <- gg_eclplot(results = res,  
                    est_colnames = c("Estimate", "Lower.CI", "Upper.CI"),
                    mindecimals = 2,
                    x_title = "Hazard ratio [95% CI]",
                    x_breaks = c(0.25, 0.5, 0.75, 1, 1.5, 2),
                    x_lim = c(0.25, 2),
-                   table_width = .56,
+                   table_width = .5,
                    header = TRUE,
                    headings = c("", "", "HR [95% CI]"))
 dev.off()
-
+cairo_ps(file="./analysis/output/g09_interactions.eps", 
+         width=6.5, 
+         height=6.8) 
+plot <- gg_eclplot(results = res,  
+                   est_colnames = c("Estimate", "Lower.CI", "Upper.CI"),
+                   mindecimals = 2,
+                   x_title = "Hazard ratio [95% CI]",
+                   x_breaks = c(0.25, 0.5, 0.75, 1, 1.5, 2),
+                   x_lim = c(0.25, 2),
+                   table_width = .5,
+                   header = TRUE,
+                   headings = c("", "", "HR [95% CI]"))
+dev.off()

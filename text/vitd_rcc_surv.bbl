@@ -22,6 +22,12 @@ Muller DC, Fanidi A, Midttun {\O}, Steffen A, Dossus L, Boutron-Ruault MC,
   Incidence and Survival in the {EPIC} Cohort.
 \newblock American Journal of Epidemiology. 2014 Sep;p. kwu204.
 
+\bibitem{gallicchio_circulating_2010-1}
+Gallicchio L, Moore LE, Stevens VL, Ahn J, Albanes D, Hartmuller V, et~al.
+\newblock Circulating 25-Hydroxyvitamin D and Risk of Kidney Cancer Cohort
+  Consortium Vitamin D Pooling Project of Rarer Cancers.
+\newblock American Journal of Epidemiology. 2010 Jul;172(1):47--57.
+
 \bibitem{joh_predicted_2013}
 Joh HK, Giovannucci EL, Bertrand KA, Lim S, Cho E.
 \newblock Predicted Plasma 25-Hydroxyvitamin D and Risk of Renal Cell Cancer.
@@ -108,5 +114,10 @@ Jia X, Aucott LS, {McNeill} G.
 \newblock Nutritional status and subsequent all-cause mortality in men and
   women aged 75 years or over living in the community.
 \newblock British Journal of Nutrition. 2007;98(03):593--599.
+
+\bibitem{feldman_role_2014}
+Feldman D, Krishnan AV, Swami S, Giovannucci E, Feldman BJ.
+\newblock The role of vitamin {D} in reducing cancer risk and progression.
+\newblock Nature Reviews Cancer. 2014 May;14(5):342--357.
 
 \end{thebibliography}

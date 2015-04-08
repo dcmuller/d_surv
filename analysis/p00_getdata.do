@@ -72,9 +72,7 @@ sort relapse_dte
 list relapse_dte in 1/5
 restore
 
-tempfile cacoh
-save `cacoh'
-
+save data/k2survivaldata_23apr2014.dta, replace
 clear
 
 
@@ -84,7 +82,7 @@ use `bevital'
 merge 1:1 id using `storage'
 assert _merge==3
 drop _merge
-merge 1:1 id using `cacoh'
+merge 1:1 id using data/k2survivaldata_23apr2014.dta
 assert _merge==3
 drop _merge
 
