@@ -6,12 +6,10 @@ Ferlay J, Steliarova-Foucher E, Lortet-Tieulent J, Rosso S, Coebergh JWW,
 \newblock Cancer incidence and mortality patterns in Europe: Estimates for 40
   countries in 2012.
 \newblock European Journal of Cancer. 2013 Apr;49(6):1374--1403.
-\newblock Available from:
-  \url{http://www.ejcancer.com/article/S0959804913000075/abstract}.
 
 \bibitem{CRUK_kidney_2014}
 {Cancer Research UK}. Statistics and outlook for kidney cancer [Website]; 2014.
-\newblock Accessed: 28 May 2014.
+\newblock [cited 2014 May 28].
 \newblock Available from:
   \url{http://www.cancerresearchuk.org/cancer-help/type/kidney-cancer/treatment/statistics-and-outlook-for-kidney-cancer#stage}.
 
@@ -117,7 +115,10 @@ Jia X, Aucott LS, {McNeill} G.
 
 \bibitem{feldman_role_2014}
 Feldman D, Krishnan AV, Swami S, Giovannucci E, Feldman BJ.
-\newblock The role of vitamin {D} in reducing cancer risk and progression.
+\newblock The role of vitanternational Committee of Medical Journal Editors
+  (ICMJE) Recommendations for the Conduct, Reporting, Editing and Publication
+  of Scholarly Work in Medical Journals:min {D} in reducing cancer risk and
+  progression.
 \newblock Nature Reviews Cancer. 2014 May;14(5):342--357.
 
 \end{thebibliography}
